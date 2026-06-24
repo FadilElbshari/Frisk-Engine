@@ -1,0 +1,83 @@
+{
+    "version": 10,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 31,
+        "patch": 0
+    },
+
+    "configurePresets": [
+        {
+            "$comment": "shared settings inherited by all configs, never invoked directly",
+            "name": "base",
+            "hidden": true,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}"
+        },
+
+        {
+            "$comment": [
+                "debug build configuration",
+                "mainly used throughout development",
+                "use dynamic (DLL) runtime linking for faster compile times"
+            ],
+            "name": "Debug",
+            "displayName": "Debug Build",
+            "description": "development build",
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "ENGINE_BUILD_SHARED": "ON"
+            }
+        },
+
+        {
+            "$comment": [
+                "release build configuration",
+                "mainly used for pre-distribution testing",
+                "uses static library linking"
+            ],
+            "name": "Release",
+            "displayName": "Release Build",
+            "description": "pre-distribution testing build",
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "ENGINE_BUILD_SHARED": "OFF"
+            }
+        },
+
+        {
+            "$comment": [
+                "distribution build configuration",
+                "used to ship software",
+                "uses static library linking"
+            ],
+            "name": "Dist",
+            "displayName": "Distribution Build",
+            "description": "distribution build",
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "ENGINE_BUILD_SHARED": "OFF",
+                "ENGINE_DIST": "ON"
+            }
+        }
+    ],
+
+    "buildPresets": [
+        {
+            "name": "Debug",
+            "configurePreset": "Debug"
+        },
+        {
+            "name": "Release",
+            "configurePreset": "Release"
+        },
+        {
+            "name": "Dist",
+            "configurePreset": "Dist"
+        }
+    ]
+
+}
