@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.31)
 
 # define the main project
-project(Frisk LANGUAGES CXX) # specifically C++ project (CXX)
+project(Frisk LANGUAGES CXX C) # specifically C++ project (CXX)
 
 # set required C++ version to C++20
 set(CMAKE_CXX_STANDARD 20)

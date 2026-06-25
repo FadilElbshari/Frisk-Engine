@@ -7,11 +7,50 @@ endif()
 
 # collect all source files within the directory
 file(GLOB_RECURSE ENGINE_SOURCES
+    CONFIGURE_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
 )
 
+file(GLOB_RECURSE ENGINE_PRIVATE_HEADERS
+    CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.h"
+)
+
+file(GLOB_RECURSE ENGINE_PUBLIC_HEADERS
+    CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h"
+)
+
 # compile the source code into a library depending on the linking type
-add_library(Engine ${ENGINE_LIB_TYPE} ${ENGINE_SOURCES})
+add_library(Engine ${ENGINE_LIB_TYPE})
+
+# expose sources
+target_sources(Engine PRIVATE
+    ${ENGINE_SOURCES}
+    ${ENGINE_PRIVATE_HEADERS}
+    ${ENGINE_PUBLIC_HEADERS}
+)
+
+# adding precompiled header
+target_precompile_headers(Engine PRIVATE
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/pch.h"
+)
+
+# add organised tree structure in editor
+source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/include"
+    PREFIX "Header Files (Public)"
+    FILES ${ENGINE_PUBLIC_HEADERS}
+)
+
+source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/src"
+    PREFIX "Source Files"
+    FILES ${ENGINE_SOURCES}
+)
+
+source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/src"
+    PREFIX "Header Files (Private)"
+    FILES ${ENGINE_PRIVATE_HEADERS}
+)
 
 # add include directories for public scope
 target_include_directories(Engine PUBLIC
