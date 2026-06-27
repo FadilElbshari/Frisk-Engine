@@ -19,6 +19,7 @@ namespace Frisk {
 		);
 
 		m_Window->Init();
+		m_Window->SetWindowBackGround(a_BuildProps.background.x, a_BuildProps.background.y, a_BuildProps.background.z);
 
 		m_InputManager = std::make_unique<Input::InputManager>();
 	}
@@ -26,16 +27,19 @@ namespace Frisk {
 	Application::~Application() = default;
 
 	void Application::Run() {
-		Log::Info("Entered run function\n");
 		while (!m_Window->ShouldClose()) {
 
 			auto& events = m_Window->GetEventQueue();
-			auto size = events.size();
-			if (size > 0) Log::Info("Event size: ", events.size(), "\n");
+			for (auto& e : events) {
+				m_InputManager->ConsumeEvent(e);
+			}
 
 			OnUpdate();
 
+
 			m_Window->ClearEventQueue();
+			
+			m_Window->ClearColorBufferBit();
 			m_Window->SwapBuffers();
 
 			m_Window->PollEvents();

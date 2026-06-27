@@ -10,7 +10,6 @@ namespace Frisk::Graphics {
 	Window::Window(U32 a_Width, U32 a_Height, STRING a_Title) : m_Width(a_Width), m_Height(a_Height), m_Title(a_Title) {}
 
 	Window::~Window() {
-	    Log::Info("Destroying Window\n");
 	    if (m_WindowHandle) glfwDestroyWindow(m_WindowHandle);
         glfwTerminate();
     };
@@ -45,6 +44,7 @@ namespace Frisk::Graphics {
 
 			win->m_Width = width;
 			win->m_Height = height;
+
 
 			glViewport(0, 0, width, height);
 		});
@@ -91,6 +91,14 @@ namespace Frisk::Graphics {
 
 	void Window::PollEvents() const {
         glfwPollEvents();
+	}
+
+	void Window::SetWindowBackGround(float r, float g, float b) const {
+		glClearColor(r / 255.0f, g / 255.0f, b / 255.0f, 1.0f);
+	}
+
+	void Window::ClearColorBufferBit() const {
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	}
 
 	const std::vector<Event>& Window::GetEventQueue() const {

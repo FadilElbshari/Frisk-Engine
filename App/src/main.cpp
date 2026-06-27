@@ -1,5 +1,3 @@
-#include "Engine/Core/Log.h"
-#include "Engine/Core/EngineAPI.h"
 #include "Engine/Application/Application.h"
 
 using namespace Frisk;
@@ -10,6 +8,6 @@ public:
 };
 
 int main() {
-	Game game({1280, 720, "Frisky Engine"});
+	Game game({1280, 720, "Frisky Engine", VEC3(150, 150, 255)});
 	game.Run();
 }

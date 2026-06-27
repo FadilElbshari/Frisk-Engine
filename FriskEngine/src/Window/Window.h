@@ -1,30 +1,11 @@
 #pragma once
 
 #include "Engine/Core/Types.h"
-#include "GraphicsContext.h"
+#include "Window/GraphicsContext.h"
+#include "Window/Event.h"
 
 namespace Frisk {
 	namespace Graphics {
-
-		struct KeyEvent {
-			int key;
-			int action;
-			int scancode;
-			int mods;
-		};
-
-		struct MouseButtonEvent {
-			int button;
-			int action;
-			int mods;
-		};
-
-		struct MouseMoveEvent {
-			double x;
-			double y;
-		};
-
-		using Event = std::variant<KeyEvent, MouseButtonEvent, MouseMoveEvent>;
 
 		class Window {
 		public:
@@ -33,9 +14,14 @@ namespace Frisk {
 
 			bool Init();
 
+			// run utility functions
 			void SwapBuffers() const;
 			void PollEvents() const;
 			bool ShouldClose() const;
+
+			// helper function wrappers
+			void SetWindowBackGround(float r, float g, float b) const;
+			void ClearColorBufferBit() const;
 
 			const std::vector<Event>& GetEventQueue() const;
 			void ClearEventQueue();

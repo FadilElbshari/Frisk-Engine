@@ -1,158 +1,188 @@
 [
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/context.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/context.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\context.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\context.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/context.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/init.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/init.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\init.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\init.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/init.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/input.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/input.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\input.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\input.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/input.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/monitor.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/monitor.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\monitor.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/monitor.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/platform.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/platform.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\platform.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\platform.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/platform.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/vulkan.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/vulkan.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\vulkan.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/vulkan.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/window.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/window.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\window.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\window.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/window.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/egl_context.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/egl_context.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\egl_context.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/egl_context.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/osmesa_context.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/osmesa_context.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\osmesa_context.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/osmesa_context.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/null_init.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/null_init.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\null_init.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\null_init.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/null_init.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/null_monitor.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/null_monitor.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\null_monitor.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\null_monitor.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/null_monitor.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/null_window.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/null_window.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\null_window.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\null_window.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/null_window.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/null_joystick.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/null_joystick.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\null_joystick.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\null_joystick.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/null_joystick.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_time.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/cocoa_time.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/cocoa_time.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_time.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\win32_module.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\win32_module.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/win32_module.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_module.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/posix_module.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/posix_module.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/posix_module.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_module.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\win32_time.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/win32_time.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_time.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/posix_thread.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/posix_thread.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\win32_thread.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/win32_thread.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_init.m.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/cocoa_init.m",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/cocoa_init.m",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\win32_init.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/win32_init.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_init.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/cocoa_joystick.m",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/cocoa_joystick.m",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\win32_joystick.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/win32_joystick.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/cocoa_monitor.m",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/cocoa_monitor.m",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\win32_monitor.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/win32_monitor.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_window.m.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/cocoa_window.m",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/cocoa_window.m",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\win32_window.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/win32_window.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_window.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src -g -std=c99 -fPIC -Wall -o _deps/glfw-build/src/CMakeFiles/glfw.dir/nsgl_context.m.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/nsgl_context.m",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/src/nsgl_context.m",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-build\\src\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /W3 /Fo_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj /Fd_deps\\glfw-build\\src\\CMakeFiles\\glfw.dir\\glfw.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\src\\wgl_context.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-src/src/wgl_context.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glfw-build/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/c++ -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glm-src -g -std=c++20 -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-switch-default -o _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.o -c /Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glm-src/glm/detail/glm.cpp",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glm-src/glm/detail/glm.cpp",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glm-src\" /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi /Za /fp:precise /Fo_deps\\glm-build\\glm\\CMakeFiles\\glm.dir\\detail\\glm.cpp.obj /Fd_deps\\glm-build\\glm\\CMakeFiles\\glm.dir\\glm.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glm-src\\glm\\detail\\glm.cpp\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glm-src/glm/detail/glm.cpp",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/_deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/cc -I/Users/fadil/Documents/Frisky-Engine/Vendor/glad/include -g -o Vendor/glad/CMakeFiles/glad.dir/src/glad.c.o -c /Users/fadil/Documents/Frisky-Engine/Vendor/glad/src/glad.c",
-    "file": "/Users/fadil/Documents/Frisky-Engine/Vendor/glad/src/glad.c",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/Vendor/glad/CMakeFiles/glad.dir/src/glad.c.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\glad\\include\" /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /FoVendor\\glad\\CMakeFiles\\glad.dir\\src\\glad.c.obj /FdVendor\\glad\\CMakeFiles\\glad.dir\\glad.pdb /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\glad\\src\\glad.c\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/Vendor/glad/src/glad.c",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/Vendor/glad/CMakeFiles/glad.dir/src/glad.c.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/c++ -DENGINE_BUILD_DLL -DENGINE_BUILD_SHARED -DEngine_EXPORTS -I/Users/fadil/Documents/Frisky-Engine/FriskEngine/include -I/Users/fadil/Documents/Frisky-Engine/FriskEngine/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glm-src -I/Users/fadil/Documents/Frisky-Engine/Vendor/glad/include -I/Users/fadil/Documents/Frisky-Engine/Vendor/stb -g -std=c++20 -fPIC -Winvalid-pch -Xclang -emit-pch -Xclang -include -Xclang /Users/fadil/Documents/Frisky-Engine/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx -x c++-header -o FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx.pch -c /Users/fadil/Documents/Frisky-Engine/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx.cxx",
-    "file": "/Users/fadil/Documents/Frisky-Engine/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx.cxx",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx.pch"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DENGINE_BUILD_DLL -DENGINE_BUILD_SHARED -DEngine_EXPORTS -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glm-src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\glad\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\stb\" /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi \"/YcC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" \"/FpC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/.//cmake_pch.cxx.pch\" \"/FIC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" /FoFriskEngine\\CMakeFiles\\Engine.dir\\cmake_pch.cxx.obj /FdFriskEngine\\CMakeFiles\\Engine.dir\\ /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\FriskEngine\\CMakeFiles\\Engine.dir\\cmake_pch.cxx\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.cxx",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.cxx.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/c++ -DENGINE_BUILD_DLL -DENGINE_BUILD_SHARED -DEngine_EXPORTS -I/Users/fadil/Documents/Frisky-Engine/FriskEngine/include -I/Users/fadil/Documents/Frisky-Engine/FriskEngine/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glm-src -I/Users/fadil/Documents/Frisky-Engine/Vendor/glad/include -I/Users/fadil/Documents/Frisky-Engine/Vendor/stb -g -std=c++20 -fPIC -Winvalid-pch -Xclang -include-pch -Xclang /Users/fadil/Documents/Frisky-Engine/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/fadil/Documents/Frisky-Engine/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx -o FriskEngine/CMakeFiles/Engine.dir/src/Renderer/Renderer.cpp.o -c /Users/fadil/Documents/Frisky-Engine/FriskEngine/src/Renderer/Renderer.cpp",
-    "file": "/Users/fadil/Documents/Frisky-Engine/FriskEngine/src/Renderer/Renderer.cpp",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/FriskEngine/CMakeFiles/Engine.dir/src/Renderer/Renderer.cpp.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DENGINE_BUILD_DLL -DENGINE_BUILD_SHARED -DEngine_EXPORTS -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glm-src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\glad\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\stb\" /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi \"/YuC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" \"/FpC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/.//cmake_pch.cxx.pch\" \"/FIC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" @FriskEngine\\CMakeFiles\\Engine.dir\\src\\Application\\Application.cpp.obj.modmap /FoFriskEngine\\CMakeFiles\\Engine.dir\\src\\Application\\Application.cpp.obj /FdFriskEngine\\CMakeFiles\\Engine.dir\\ /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\\Application\\Application.cpp\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/FriskEngine/src/Application/Application.cpp",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/src/Application/Application.cpp.obj"
   },
   {
-    "directory": "/Users/fadil/Documents/Frisky-Engine/build/Debug",
-    "command": "/usr/bin/c++ -DENGINE_BUILD_DLL -DENGINE_BUILD_SHARED -DEngine_EXPORTS -I/Users/fadil/Documents/Frisky-Engine/FriskEngine/include -I/Users/fadil/Documents/Frisky-Engine/FriskEngine/src -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glfw-src/include -I/Users/fadil/Documents/Frisky-Engine/build/Debug/_deps/glm-src -I/Users/fadil/Documents/Frisky-Engine/Vendor/glad/include -I/Users/fadil/Documents/Frisky-Engine/Vendor/stb -g -std=c++20 -fPIC -Winvalid-pch -Xclang -include-pch -Xclang /Users/fadil/Documents/Frisky-Engine/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/fadil/Documents/Frisky-Engine/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx -o FriskEngine/CMakeFiles/Engine.dir/src/Window/Window.cpp.o -c /Users/fadil/Documents/Frisky-Engine/FriskEngine/src/Window/Window.cpp",
-    "file": "/Users/fadil/Documents/Frisky-Engine/FriskEngine/src/Window/Window.cpp",
-    "output": "/Users/fadil/Documents/Frisky-Engine/build/Debug/FriskEngine/CMakeFiles/Engine.dir/src/Window/Window.cpp.o"
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DENGINE_BUILD_DLL -DENGINE_BUILD_SHARED -DEngine_EXPORTS -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glm-src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\glad\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\stb\" /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi \"/YuC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" \"/FpC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/.//cmake_pch.cxx.pch\" \"/FIC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" @FriskEngine\\CMakeFiles\\Engine.dir\\src\\InputManager\\InputManager.cpp.obj.modmap /FoFriskEngine\\CMakeFiles\\Engine.dir\\src\\InputManager\\InputManager.cpp.obj /FdFriskEngine\\CMakeFiles\\Engine.dir\\ /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\\InputManager\\InputManager.cpp\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/FriskEngine/src/InputManager/InputManager.cpp",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/src/InputManager/InputManager.cpp.obj"
+  },
+  {
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DENGINE_BUILD_DLL -DENGINE_BUILD_SHARED -DEngine_EXPORTS -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glm-src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\glad\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\stb\" /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi \"/YuC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" \"/FpC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/.//cmake_pch.cxx.pch\" \"/FIC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" @FriskEngine\\CMakeFiles\\Engine.dir\\src\\OpenGL\\OpenGLcontext.cpp.obj.modmap /FoFriskEngine\\CMakeFiles\\Engine.dir\\src\\OpenGL\\OpenGLcontext.cpp.obj /FdFriskEngine\\CMakeFiles\\Engine.dir\\ /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\\OpenGL\\OpenGLcontext.cpp\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/FriskEngine/src/OpenGL/OpenGLcontext.cpp",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/src/OpenGL/OpenGLcontext.cpp.obj"
+  },
+  {
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DENGINE_BUILD_DLL -DENGINE_BUILD_SHARED -DEngine_EXPORTS -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glm-src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\glad\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\stb\" /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi \"/YuC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" \"/FpC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/.//cmake_pch.cxx.pch\" \"/FIC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" @FriskEngine\\CMakeFiles\\Engine.dir\\src\\Renderer\\Renderer.cpp.obj.modmap /FoFriskEngine\\CMakeFiles\\Engine.dir\\src\\Renderer\\Renderer.cpp.obj /FdFriskEngine\\CMakeFiles\\Engine.dir\\ /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\\Renderer\\Renderer.cpp\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/FriskEngine/src/Renderer/Renderer.cpp",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/src/Renderer/Renderer.cpp.obj"
+  },
+  {
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DENGINE_BUILD_DLL -DENGINE_BUILD_SHARED -DEngine_EXPORTS -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glm-src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\glad\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\stb\" /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi \"/YuC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" \"/FpC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/.//cmake_pch.cxx.pch\" \"/FIC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" @FriskEngine\\CMakeFiles\\Engine.dir\\src\\Window\\GraphicsContext.cpp.obj.modmap /FoFriskEngine\\CMakeFiles\\Engine.dir\\src\\Window\\GraphicsContext.cpp.obj /FdFriskEngine\\CMakeFiles\\Engine.dir\\ /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\\Window\\GraphicsContext.cpp\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/FriskEngine/src/Window/GraphicsContext.cpp",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/src/Window/GraphicsContext.cpp.obj"
+  },
+  {
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DENGINE_BUILD_DLL -DENGINE_BUILD_SHARED -DEngine_EXPORTS -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glm-src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\glad\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\stb\" /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi \"/YuC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" \"/FpC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/.//cmake_pch.cxx.pch\" \"/FIC:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/cmake_pch.hxx\" @FriskEngine\\CMakeFiles\\Engine.dir\\src\\Window\\Window.cpp.obj.modmap /FoFriskEngine\\CMakeFiles\\Engine.dir\\src\\Window\\Window.cpp.obj /FdFriskEngine\\CMakeFiles\\Engine.dir\\ /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\src\\Window\\Window.cpp\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/FriskEngine/src/Window/Window.cpp",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/FriskEngine/CMakeFiles/Engine.dir/src/Window/Window.cpp.obj"
+  },
+  {
+    "directory": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug",
+    "command": "C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DENGINE_BUILD_SHARED -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\App\\src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\FriskEngine\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glfw-src\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\build\\Debug\\_deps\\glm-src\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\glad\\include\" -I\"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\Vendor\\stb\" /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi @App\\CMakeFiles\\App.dir\\src\\main.cpp.obj.modmap /FoApp\\CMakeFiles\\App.dir\\src\\main.cpp.obj /FdApp\\CMakeFiles\\App.dir\\ /FS -c \"C:\\Users\\Fadil\\Documents\\Git Repos\\Frisk\\App\\src\\main.cpp\"",
+    "file": "C:/Users/Fadil/Documents/Git Repos/Frisk/App/src/main.cpp",
+    "output": "C:/Users/Fadil/Documents/Git Repos/Frisk/build/Debug/App/CMakeFiles/App.dir/src/main.cpp.obj"
   }
 ]
