@@ -10,6 +10,7 @@
 #include <memory>
 #include <algorithm>
 #include <functional>
+#include <variant>
 
 // third-party libraries
 #include <glad/glad.h>

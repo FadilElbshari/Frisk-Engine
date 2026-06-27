@@ -10,9 +10,6 @@
 	#define ENGINE_DEBUG_BREAK()
 #endif
 
-// Remember to remove this before building
-#define ENGINE_BUILD_SHARED
-
 #if defined(ENGINE_BUILD_SHARED)
 
 
@@ -32,5 +29,5 @@ inline void EngineAssertHandler(const char* expr, const char* message, const cha
         } while(false)
 
 #else
-    #define ENGINE_ASSERT(condition, message) ((void)0)
+    #define FRISK_ASSERT(condition, message) ((void)0)
 #endif

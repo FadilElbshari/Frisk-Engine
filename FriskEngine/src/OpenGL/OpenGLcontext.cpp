@@ -19,6 +19,7 @@ namespace Frisk::Graphics {
 		Log::Info("Starting GLFW: ", glfwGetVersionString(), "\n");
 		Log::Info("Renderer: ", glGetString(GL_RENDERER), "\n");
 		Log::Info("OpenGL Version: ", glGetString(GL_VERSION), "\n\n");
+		return true;
 	}
 
 	void OpenGLcontext::SwapBuffers() {

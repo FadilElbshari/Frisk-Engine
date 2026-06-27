@@ -1,14 +1,16 @@
 #pragma once
 #include <GLFW/glfw3.h>
 
+#include "Window/GraphicsContext.h"
+
 namespace Frisk::Graphics {
-	class OpenGLcontext {
+	class OpenGLcontext : public GraphicsContext {
 	public:
 		OpenGLcontext(GLFWwindow* a_WindowHandle);
-		~OpenGLcontext() = default;
+		~OpenGLcontext() override = default;
 
-		bool Init();
-		void SwapBuffers();
+		virtual bool Init() override;
+		virtual void SwapBuffers() override;
 
 	private:
 		GLFWwindow* m_WindowHandle;
