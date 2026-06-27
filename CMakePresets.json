@@ -1,114 +1,96 @@
 {
-    "version": 9,
-    "cmakeMinimumRequired": {
-        "major": 3,
-        "minor": 31,
-        "patch": 0
+  "version": 9,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 31,
+    "patch": 0
+  },
+
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}"
     },
 
-    "configurePresets": [
-        {
-            "$comment": "shared settings inherited by all configs, never invoked directly",
-            "name": "base",
-            "hidden": true,
-            "generator": "Ninja",
-            "binaryDir": "${sourceDir}/build/${presetName}"
-        },
+    {
+      "name": "Debug",
+      "displayName": "Debug Build",
+      "description": "development build",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "ENGINE_BUILD_SHARED": "ON"
+      }
+    },
 
-        {
-            "$comment": [
-                "debug build configuration",
-                "mainly used throughout development",
-                "use dynamic (DLL) runtime linking for faster compile times"
-            ],
-            "name": "Debug",
-            "displayName": "Debug Build",
-            "description": "development build",
-            "inherits": "base",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "ENGINE_BUILD_SHARED": "ON"
-            }
-        },
+    {
+      "name": "Release",
+      "displayName": "Release Build",
+      "description": "pre-distribution testing build",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "ENGINE_BUILD_SHARED": "OFF"
+      }
+    },
 
-        {
-            "$comment": [
-                "release build configuration",
-                "mainly used for pre-distribution testing",
-                "uses static library linking"
-            ],
-            "name": "Release",
-            "displayName": "Release Build",
-            "description": "pre-distribution testing build",
-            "inherits": "base",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
-                "ENGINE_BUILD_SHARED": "OFF"
-            }
-        },
+    {
+      "name": "Dist",
+      "displayName": "Distribution Build",
+      "description": "distribution build",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "ENGINE_BUILD_SHARED": "OFF",
+        "ENGINE_DIST": "ON"
+      }
+    },
 
-        {
-            "$comment": [
-                "distribution build configuration",
-                "used to ship software",
-                "uses static library linking"
-            ],
-            "name": "Dist",
-            "displayName": "Distribution Build",
-            "description": "distribution build",
-            "inherits": "base",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
-                "ENGINE_BUILD_SHARED": "OFF",
-                "ENGINE_DIST": "ON"
-            }
-        },
+    {
+      "name": "VS2022",
+      "displayName": "Visual Studio 2022 Solution",
+      "generator": "Visual Studio 17 2022",
+      "architecture": { "value": "x64", "strategy": "set" },
+      "binaryDir": "${sourceDir}/build/vs2022",
+      "cacheVariables": {
+        "ENGINE_BUILD_SHARED": "ON"
+      }
+    },
 
-        {
-            "name": "VS2022",
-            "displayName": "Visual Studio 2022 Solution",
-            "generator": "Visual Studio 17 2022",
-            "architecture": { "value": "x64", "strategy": "set" },
-            "binaryDir": "${sourceDir}/build/vs2022",
-            "cacheVariables": {
-                "ENGINE_BUILD_SHARED": "ON"
-            }
-        },
+    {
+      "name": "VS2026",
+      "displayName": "Visual Studio 2026 Solution",
+      "generator": "Visual Studio 18 2026",
+      "architecture": { "value": "x64", "strategy": "set" },
+      "binaryDir": "${sourceDir}/build/vs2026",
+      "cacheVariables": {
+        "ENGINE_BUILD_SHARED": "ON"
+      }
+    }
+  ],
 
-        {
-            "name": "VS2026",
-            "displayName": "Visual Studio 2026 Solution",
-            "generator": "Visual Studio 18 2026",
-            "architecture": { "value": "x64", "strategy": "set" },
-            "binaryDir": "${sourceDir}/build/vs2026",
-            "cacheVariables": {
-                "ENGINE_BUILD_SHARED": "ON"
-            }
-        }
-    ],
-
-    "buildPresets": [
-        {
-            "name": "Debug",
-            "configurePreset": "Debug"
-        },
-        {
-            "name": "Release",
-            "configurePreset": "Release"
-        },
-        {
-            "name": "Dist",
-            "configurePreset": "Dist"
-        },
-        {
-            "name": "VS2022",
-            "configurePreset": "VS2022"
-        },
-        {
-            "name": "VS2026",
-            "configurePreset": "VS2026"
-        }
-
-    ]
-
+  "buildPresets": [
+    {
+      "name": "Debug",
+      "configurePreset": "Debug"
+    },
+    {
+      "name": "Release",
+      "configurePreset": "Release"
+    },
+    {
+      "name": "Dist",
+      "configurePreset": "Dist"
+    },
+    {
+      "name": "VS2022",
+      "configurePreset": "VS2022"
+    },
+    {
+      "name": "VS2026",
+      "configurePreset": "VS2026"
+    }
+  ]
 }

@@ -29,8 +29,6 @@ namespace Frisk {
 		Log::Info("Entered run function\n");
 		while (!m_Window->ShouldClose()) {
 
-			glfwPollEvents();
-
 			auto& events = m_Window->GetEventQueue();
 			auto size = events.size();
 			if (size > 0) Log::Info("Event size: ", events.size(), "\n");
@@ -39,6 +37,8 @@ namespace Frisk {
 
 			m_Window->ClearEventQueue();
 			m_Window->SwapBuffers();
+
+			m_Window->PollEvents();
 		}
 	}
 }

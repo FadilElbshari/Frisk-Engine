@@ -12,6 +12,4 @@ public:
 int main() {
 	Game game({1280, 720, "Frisky Engine"});
 	game.Run();
-
-	std::cin.get();
 }

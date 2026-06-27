@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Engine/Core/Types.h"
-#include "Engine/Core/EngineAPI.h"
+#include "GraphicsContext.h"
 
 namespace Frisk {
 	namespace Graphics {
@@ -34,16 +34,25 @@ namespace Frisk {
 			bool Init();
 
 			void SwapBuffers() const;
+			void PollEvents() const;
 			bool ShouldClose() const;
 
 			const std::vector<Event>& GetEventQueue() const;
 			void ClearEventQueue();
 
 		private:
-			struct Impl;
-			std::unique_ptr<Impl> m_Impl;
+
+    		GLFWwindow* m_WindowHandle = nullptr;
+
+    		std::unique_ptr<GraphicsContext> m_Context;
+    		std::vector<Event> m_EventQueue;
+
+    		U32 m_Width = 0;
+    		U32 m_Height = 0;
+    		STRING m_Title;
+
+    		bool m_Running = false;
 
 		};
 	}
 }
-
