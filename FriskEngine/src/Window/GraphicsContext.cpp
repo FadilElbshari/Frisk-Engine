@@ -1,4 +1,4 @@
-#include "GraphicsContext.h"
+#include "Window/GraphicsContext.h"
 #include "OpenGL/OpenGLcontext.h"
 
 #include "Core/Assert.h"

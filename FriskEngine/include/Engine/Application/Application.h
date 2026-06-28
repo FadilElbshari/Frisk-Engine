@@ -3,7 +3,6 @@
 #include "Engine/Core/EngineAPI.h"
 #include "Engine/Core/Types.h"
 
-#include "memory"
 
 namespace Frisk::Graphics {
 	class Window;

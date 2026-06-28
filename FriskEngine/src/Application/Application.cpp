@@ -38,7 +38,7 @@ namespace Frisk {
 
 
 			m_Window->ClearEventQueue();
-			
+
 			m_Window->ClearColorBufferBit();
 			m_Window->SwapBuffers();
 
