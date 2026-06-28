@@ -12,6 +12,8 @@ namespace Frisk {
         virtual void Bind() const override;
         virtual void Unbind() const override;
 
+        virtual void SetData(const void* a_Data, U32 a_Size) override;
+
     private:
         U32 m_VertexBufferID;
     };
@@ -25,6 +27,8 @@ namespace Frisk {
 
         virtual void Bind() const override;
         virtual void Unbind() const override;
+
+        virtual void SetData(const U32* a_Data, U32 a_Size) override;
 
     private:
         U32 m_IndexBufferID;
