@@ -1,7 +1,6 @@
 #include "OpenGL/OpenGLshader.h"
 
 #include "Engine/Utils/File.h"
-#include "pch.h"
 
 namespace Frisk {
 
@@ -25,7 +24,7 @@ namespace Frisk {
         glGetShaderiv(m_VertexShader, GL_COMPILE_STATUS, &success);
         if (!success) {
             glGetShaderInfoLog(m_VertexShader, 512, NULL, info);
-            Log::Error("Error compiling vertex shader: ", a_VertexShaderPath.c_str(), ". ", info, "\n\n");
+            Log::Error("Error compiling vertex shader: ", a_VertexShaderPath, ". ", info, "\n\n");
             return;
         }
 
@@ -37,7 +36,7 @@ namespace Frisk {
         glGetShaderiv(m_FragmentShader, GL_COMPILE_STATUS, &success);
         if (!success) {
             glGetShaderInfoLog(m_FragmentShader, 512, NULL, info);
-            Log::Error("Error compiling vertex shader: ", a_FragmentShaderPath.c_str(), ". ", info, "\n\n");
+            Log::Error("Error compiling vertex shader: ", a_FragmentShaderPath, ". ", info, "\n\n");
             return;
         }
 
@@ -67,6 +66,6 @@ namespace Frisk {
 
 
     U32 OpenGLshader::GetUniformLocation(STRING& a_Name) const {
-        glGetUniformLocation(m_ShaderProgram, a_Name.c_str());
+        return glGetUniformLocation(m_ShaderProgram, a_Name.c_str());
     }
 }

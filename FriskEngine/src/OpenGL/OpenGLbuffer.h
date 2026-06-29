@@ -29,8 +29,10 @@ namespace Frisk {
         virtual void Unbind() const override;
 
         virtual void SetData(const U32* a_Data, U32 a_Size) override;
+        virtual U32 GetIndexCount() const override;
 
     private:
         U32 m_IndexBufferID;
+        U32 m_IndexCount;
     };
 }

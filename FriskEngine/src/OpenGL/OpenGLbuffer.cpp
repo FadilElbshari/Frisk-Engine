@@ -35,14 +35,14 @@ namespace Frisk {
     }
 
 
-    OpenGLindexBuffer::OpenGLindexBuffer(const U32* a_Indcs, U32 a_Size) {
+    OpenGLindexBuffer::OpenGLindexBuffer(const U32* a_Indcs, U32 a_Size) : m_IndexCount(a_Size) {
         glGenBuffers(1, &m_IndexBufferID);
         Bind();
-
+        
         glBufferData(GL_ARRAY_BUFFER, a_Size, a_Indcs, GL_STATIC_DRAW);
     }
 
-    OpenGLindexBuffer::OpenGLindexBuffer(U32 a_Size) {
+    OpenGLindexBuffer::OpenGLindexBuffer(U32 a_Size) : m_IndexCount(a_Size) {
         glGenBuffers(1, &m_IndexBufferID);
         Bind();
 
@@ -60,8 +60,13 @@ namespace Frisk {
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     }
 
-    void OpenGLindexBuffer::SetData(const U32* a_Data, U32 a_Size)  {
+    void OpenGLindexBuffer::SetData(const U32* a_Data, U32 a_Size) {
+        m_IndexCount = a_Size;
         glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, 0, a_Size, a_Data);
+    }
+
+    U32 OpenGLindexBuffer::GetIndexCount() const {
+        return m_IndexCount;
     }
 
 }
