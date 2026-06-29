@@ -5,6 +5,11 @@ using namespace Frisk;
 class Game : public Application {
 public:
 	using Application::Application;
+
+protected:
+    virtual void OnUpdate() override {
+
+    }
 };
 
 int main() {

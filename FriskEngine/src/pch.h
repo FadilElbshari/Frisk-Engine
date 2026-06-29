@@ -11,6 +11,8 @@
 #include <algorithm>
 #include <functional>
 #include <variant>
+#include <filesystem>
+#include "fstream"
 
 // third-party libraries
 #include <glad/glad.h>
