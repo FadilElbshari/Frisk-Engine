@@ -27,6 +27,7 @@ namespace Frisk {
 	Application::~Application() = default;
 
 	void Application::Run() {
+
 		while (!m_Window->ShouldClose()) {
 
 			auto& events = m_Window->GetEventQueue();
@@ -34,8 +35,7 @@ namespace Frisk {
 				m_InputManager->ConsumeEvent(e);
 			}
 
-			OnUpdate();
-
+			//OnUpdate();
 
 			m_Window->ClearEventQueue();
 
