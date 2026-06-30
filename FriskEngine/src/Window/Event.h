@@ -2,7 +2,6 @@
 
 namespace Frisk {
 
-
 	enum EventIdentifier {
 		KEY_EVENT_FLAG,
 		MOUSE_BUTTON_FLAG,

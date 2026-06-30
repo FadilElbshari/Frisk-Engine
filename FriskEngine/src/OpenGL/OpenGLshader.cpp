@@ -1,10 +1,11 @@
 #include "OpenGL/OpenGLshader.h"
 
 #include "Engine/Utils/File.h"
+#include "Engine/Core/Log.h"
 
 namespace Frisk {
 
-    OpenGLshader::OpenGLshader(std::filesystem::path &a_VertexShaderPath, std::filesystem::path &a_FragmentShaderPath) {
+    OpenGLshader::OpenGLshader(const std::filesystem::path &a_VertexShaderPath, const std::filesystem::path &a_FragmentShaderPath) {
         STRING Vsource = ParseFile(a_VertexShaderPath);
         STRING Fsource = ParseFile(a_FragmentShaderPath);
 

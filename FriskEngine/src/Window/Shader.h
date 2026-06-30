@@ -8,6 +8,6 @@ namespace Frisk {
 	    virtual void Bind() const = 0;
 		virtual void Unbind() const = 0;
 
-		static std::unique_ptr<Shader> Create(std::filesystem::path& a_VertexShaderPath, std::filesystem::path& a_FragmentShaderPath);
+		static std::unique_ptr<Shader> Create(const std::filesystem::path& a_VertexShaderPath, const std::filesystem::path& a_FragmentShaderPath);
 	};
 }

@@ -11,7 +11,7 @@ namespace Frisk {
 		virtual void Bind() const = 0;
 		virtual void Unbind() const = 0;
 
-		virtual void AssignVertexBuffer(VertexBuffer& a_VBO) = 0;
+		virtual void AssignVertexBuffer(std::unique_ptr<VertexBuffer>& a_VBO) = 0;
 
 		static std::unique_ptr<VertexArray> Create();
 	};

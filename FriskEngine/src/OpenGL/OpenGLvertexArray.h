@@ -11,10 +11,11 @@ namespace Frisk {
         virtual void Bind() const override;
         virtual void Unbind() const override;
 
-        virtual void AssignVertexBuffer(VertexBuffer& a_VBO) override;
+        virtual void AssignVertexBuffer(std::unique_ptr<VertexBuffer>& a_VBO) override;
 
     private:
         U32 m_VertexArrayID;
+        U32 m_VertexAttribCounter;
 
     };
 }

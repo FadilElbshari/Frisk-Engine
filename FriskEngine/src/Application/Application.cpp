@@ -1,10 +1,16 @@
 #include "Engine/Application/Application.h"
 #include "Core/Assert.h"
 
+#include "Window/Buffer.h"
 #include "Window/Window.h"
 #include "InputManager/InputManager.h"
 
 #include <GLFW/glfw3.h>
+
+#include "Window/Buffer.h"
+#include "Window/VertexArray.h"
+#include "Window/Shader.h"
+#include "pch.h"
 
 namespace Frisk {
 	Application::Application(const ApplicationProps& a_BuildProps) {
@@ -28,6 +34,23 @@ namespace Frisk {
 
 	void Application::Run() {
 
+	    float verts[] = {
+				-0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
+		 	    0.0f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+				0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f
+		};
+
+	    std::unique_ptr<Shader> shader = Shader::Create("shaders/main.vert", "shaders/main.frag");
+		std::unique_ptr<VertexArray> VAO = VertexArray::Create();
+
+		std::unique_ptr<VertexBuffer> VBO = VertexBuffer::Create(verts, sizeof(verts));
+
+		VertexBufferLayout layout({VertexBufferComponent("Position", VertexDataType::Float3), VertexBufferComponent("Color", VertexDataType::Float3)});
+
+		VBO->SetLayout(layout);
+
+		VAO->AssignVertexBuffer(VBO);
+
 		while (!m_Window->ShouldClose()) {
 
 			auto& events = m_Window->GetEventQueue();
@@ -35,11 +58,16 @@ namespace Frisk {
 				m_InputManager->ConsumeEvent(e);
 			}
 
+			m_Window->ClearColorBufferBit();
+
+			shader->Bind();
+			VAO->Bind();
+			// glBindVertexArray(VAO);
+			glDrawArrays(GL_TRIANGLES, 0, 3);
 			//OnUpdate();
 
 			m_Window->ClearEventQueue();
 
-			m_Window->ClearColorBufferBit();
 			m_Window->SwapBuffers();
 
 			m_Window->PollEvents();

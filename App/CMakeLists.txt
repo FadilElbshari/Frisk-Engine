@@ -27,3 +27,9 @@ if(ENGINE_BUILD_SHARED AND WIN32)
             $<TARGET_FILE:Engine> $<TARGET_FILE_DIR:App>
     )
 endif()
+
+add_custom_command(TARGET App POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_CURRENT_SOURCE_DIR}/shaders
+        $<TARGET_FILE_DIR:App>/shaders
+)

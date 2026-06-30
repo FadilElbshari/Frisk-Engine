@@ -14,8 +14,12 @@ namespace Frisk {
 
         virtual void SetData(const void* a_Data, U32 a_Size) override;
 
+        virtual void SetLayout(const VertexBufferLayout& a_Layout) override;
+        const virtual VertexBufferLayout& GetLayout() const override;
+
     private:
         U32 m_VertexBufferID;
+        VertexBufferLayout m_Layout;
     };
 
     class OpenGLindexBuffer : public IndexBuffer {

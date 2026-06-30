@@ -1,4 +1,5 @@
 #include "OpenGL/OpenGLbuffer.h"
+#include "Window/Buffer.h"
 #include "glad/glad.h"
 
 
@@ -35,10 +36,20 @@ namespace Frisk {
     }
 
 
+
+    const VertexBufferLayout& OpenGLvertexBuffer::GetLayout() const {
+        return m_Layout;
+    }
+
+    void OpenGLvertexBuffer::SetLayout(const VertexBufferLayout& a_Layout)  {
+        m_Layout = a_Layout;
+    }
+
+
     OpenGLindexBuffer::OpenGLindexBuffer(const U32* a_Indcs, U32 a_Size) : m_IndexCount(a_Size) {
         glGenBuffers(1, &m_IndexBufferID);
         Bind();
-        
+
         glBufferData(GL_ARRAY_BUFFER, a_Size, a_Indcs, GL_STATIC_DRAW);
     }
 

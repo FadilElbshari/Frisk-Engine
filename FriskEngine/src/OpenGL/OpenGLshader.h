@@ -5,7 +5,7 @@
 namespace Frisk {
     class OpenGLshader : public Shader {
         public:
-            OpenGLshader(std::filesystem::path& a_VertexShaderPath, std::filesystem::path& a_FragmentShaderPath);
+            OpenGLshader(const std::filesystem::path& a_VertexShaderPath, const std::filesystem::path& a_FragmentShaderPath);
             virtual ~OpenGLshader();
 
             virtual void Bind() const override;
