@@ -1,11 +1,10 @@
  #pragma once
 
  #include <iostream>
- #include <fstream>
 
  namespace Frisk {
      namespace Log {
-        
+
          template<typename ...Args>
          void Info(const Args&... to_print) {
              std::cout << "\x1b[32m" << "[Info] ";

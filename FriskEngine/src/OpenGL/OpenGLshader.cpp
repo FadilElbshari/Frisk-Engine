@@ -2,6 +2,7 @@
 
 #include "Engine/Utils/File.h"
 #include "Engine/Core/Log.h"
+#include "pch.h"
 
 namespace Frisk {
 
@@ -65,8 +66,38 @@ namespace Frisk {
         glUseProgram(0);
     }
 
+    void OpenGLshader::SetFloat(const STRING& a_Name, float a_Value) const {
+        Bind();
+        glUniform1f(GetUniformLocation(a_Name), a_Value);
+    }
+    void OpenGLshader::SetFloat2(const STRING& a_Name, const VEC2& a_Value) const {
+        Bind();
+        glUniform2f(GetUniformLocation(a_Name), a_Value.x, a_Value.y);
+    }
+    void OpenGLshader::SetFloat3(const STRING& a_Name, const VEC3& a_Value) const {
+        Bind();
+        glUniform3f(GetUniformLocation(a_Name), a_Value.x, a_Value.y, a_Value.z);
+    }
+    void OpenGLshader::SetFloat4(const STRING& a_Name, const VEC4& a_Value) const {
+        Bind();
+        glUniform4f(GetUniformLocation(a_Name), a_Value.x, a_Value.y, a_Value.z, a_Value.w);
+    }
+    void OpenGLshader::SetMat3(const STRING& a_Name, const MAT3& a_Value) const {
+        Bind();
+        glUniformMatrix3fv(GetUniformLocation(a_Name), 1, GL_FALSE, glm::value_ptr(a_Value));
+    }
+    void OpenGLshader::SetMat4(const STRING& a_Name, const MAT4& a_Value) const {
+        Bind();
+        glUniformMatrix4fv(GetUniformLocation(a_Name), 1, GL_FALSE, glm::value_ptr(a_Value));
+    }
 
-    U32 OpenGLshader::GetUniformLocation(STRING& a_Name) const {
+    void OpenGLshader::SetBool(const STRING& a_Name, bool a_Value) const {
+        Bind();
+        glUniform1i(GetUniformLocation(a_Name), a_Value);
+    }
+
+
+    U32 OpenGLshader::GetUniformLocation(const STRING& a_Name) const {
         return glGetUniformLocation(m_ShaderProgram, a_Name.c_str());
     }
 }

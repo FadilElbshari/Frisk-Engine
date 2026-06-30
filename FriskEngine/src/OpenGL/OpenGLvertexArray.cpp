@@ -34,7 +34,7 @@ namespace Frisk {
             // float check
             if (comp.type >= VertexDataType::Float && comp.type <= VertexDataType::Float4) {
                 glVertexAttribPointer(m_VertexAttribCounter, comp.GetInternalComponentCount(), GL_FLOAT, comp.normalised ? GL_TRUE : GL_FALSE, layout.GetStride(), reinterpret_cast<void*>(comp.offset));
-                Log::Info(comp.type == VertexDataType::Float3, " ", comp.GetInternalComponentCount(), " ", comp.offset, " ", m_VertexAttribCounter, comp.normalised ? GL_TRUE : GL_FALSE, "\n");
+                // Log::Info(comp.type == VertexDataType::Float3, " ", comp.GetInternalComponentCount(), " ", comp.offset, " ", m_VertexAttribCounter, comp.normalised ? GL_TRUE : GL_FALSE, "\n");
                 glEnableVertexAttribArray(m_VertexAttribCounter);
                 m_VertexAttribCounter++;
             }

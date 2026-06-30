@@ -43,6 +43,7 @@ namespace Frisk {
 	    std::unique_ptr<Shader> shader = Shader::Create("shaders/main.vert", "shaders/main.frag");
 		std::unique_ptr<VertexArray> VAO = VertexArray::Create();
 
+
 		std::unique_ptr<VertexBuffer> VBO = VertexBuffer::Create(verts, sizeof(verts));
 
 		VertexBufferLayout layout({VertexBufferComponent("Position", VertexDataType::Float3), VertexBufferComponent("Color", VertexDataType::Float3)});
@@ -63,6 +64,7 @@ namespace Frisk {
 			shader->Bind();
 			VAO->Bind();
 			// glBindVertexArray(VAO);
+			shader->SetFloat("time", glfwGetTime());
 			glDrawArrays(GL_TRIANGLES, 0, 3);
 			//OnUpdate();
 

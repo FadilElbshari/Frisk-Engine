@@ -14,4 +14,5 @@ using VEC2 = glm::vec2;
 using VEC3 = glm::vec3;
 using VEC4 = glm::vec4;
 
+using MAT3 = glm::mat3;
 using MAT4 = glm::mat4;
