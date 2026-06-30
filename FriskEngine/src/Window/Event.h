@@ -11,8 +11,8 @@ namespace Frisk {
 
 	struct KeyEvent {
 		int key;
-		int action;
 		int scancode;
+		int action;
 		int mods;
 		EventIdentifier flag = KEY_EVENT_FLAG;
 	};

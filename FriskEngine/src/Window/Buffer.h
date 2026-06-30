@@ -28,6 +28,8 @@ namespace Frisk {
 			case VertexDataType::Int4: return base_size * 4;
 			case VertexDataType::Bool: return 1;
 		}
+
+		return 0;
 	}
 
 	struct VertexBufferComponent {

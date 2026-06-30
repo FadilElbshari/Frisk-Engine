@@ -25,5 +25,7 @@
 // custom types
 #include "Engine/Core/Types.h"
 
+#include "Engine/Core/Log.h"
+
 // dll control
 #include "Engine/Core/EngineAPI.h"

@@ -8,6 +8,8 @@ namespace Frisk {
 	    virtual void Bind() const = 0;
 		virtual void Unbind() const = 0;
 
+		virtual void Reload() = 0;
+
 		virtual void SetFloat(const STRING& a_Name, float a_Value) const = 0;
 		virtual void SetFloat2(const STRING& a_Name, const VEC2& a_Value) const = 0;
 		virtual void SetFloat3(const STRING& a_Name, const VEC3& a_Value) const = 0;

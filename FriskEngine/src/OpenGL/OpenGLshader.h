@@ -10,6 +10,8 @@ namespace Frisk {
 
             virtual void Bind() const override;
             virtual void Unbind() const override;
+    
+            virtual void Reload() override;
 
             virtual void SetFloat(const STRING& a_Name, float a_Value) const override;
     		virtual void SetFloat2(const STRING& a_Name, const VEC2& a_Value) const override;
@@ -25,6 +27,9 @@ namespace Frisk {
             U32 m_VertexShader;
             U32 m_FragmentShader;
             U32 m_ShaderProgram;
+
+            std::filesystem::path m_VertexShaderPath;
+            std::filesystem::path m_FragmentShaderPath;
 
             U32 GetUniformLocation(const STRING& a_Name) const;
 

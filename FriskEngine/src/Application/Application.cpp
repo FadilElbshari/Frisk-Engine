@@ -61,6 +61,10 @@ namespace Frisk {
 
 			m_Window->ClearColorBufferBit();
 
+			if (m_InputManager->GetKeyStatus(GLFW_KEY_R) == Input::KeyStatus::JustPressed) {
+				shader->Reload();
+			}
+
 			shader->Bind();
 			VAO->Bind();
 			// glBindVertexArray(VAO);
@@ -68,10 +72,11 @@ namespace Frisk {
 			glDrawArrays(GL_TRIANGLES, 0, 3);
 			//OnUpdate();
 
+
+			m_InputManager->HaltInputs();
+
 			m_Window->ClearEventQueue();
-
 			m_Window->SwapBuffers();
-
 			m_Window->PollEvents();
 		}
 	}

@@ -8,7 +8,6 @@ namespace Frisk {
     STRING ParseFile(const std::filesystem::path &a_FilePath) {
         std::ifstream file(a_FilePath);
 
-
         if (!file.is_open()) {
             Log::Error("failed to open file: ", a_FilePath, "\n\n");
             return "";

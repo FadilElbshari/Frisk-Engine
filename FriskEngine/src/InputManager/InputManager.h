@@ -3,50 +3,24 @@
 #include "Window/Event.h"
 
 namespace Frisk::Input {
+
+	enum class KeyStatus { Released = 0, JustPressed, Held, Buffer};
+
 	class InputManager {
 
 	public:
 		InputManager() = default;
 		~InputManager() = default;
 		
-		void ConsumeEvent(const Event& e) {
-			std::visit([](const auto& event) {
-				using T = std::decay_t<decltype(event)>;
+		void ConsumeEvent(const Event& e);
 
-				// start comparing types
-				if constexpr (std::is_same_v<T, KeyEvent>) {
-					Log::Info("Key event\n");
-				}
-				else if constexpr (std::is_same_v<T, MouseButtonEvent>) {
-					Log::Info("Mouse button event\n");
-				}
-			}, e);
-		}
+		KeyStatus GetKeyStatus(int keycode);
+		KeyStatus GetButtonStatus(int button);
 
-		bool isKeyDown(int keycode) {
-			if (!isKeyValid(keycode)) return false;
+		void getMousePos(double& xpos, double& ypos) const;
+		void getMousePosDelta(double& dx, double& dy);
 
-			return m_Keys[getIndex(keycode)];
-		}
-
-		bool isButtonDown(int button) {
-			if (!isButtonValid(button)) return false;
-
-			return m_Buttons[button];
-		}
-
-		void getMousePos(double& xpos, double& ypos) const {
-			xpos = m_MouseXPOS;
-			ypos = m_MouseYPOS;
-		}
-
-		void getMousePosDelta(double& dx, double& dy) {
-			dx = m_MouseXPOS_DELTA;
-			dy = m_MouseYPOS_DELTA;
-
-			m_MouseXPOS_DELTA = 0;
-			m_MouseYPOS_DELTA = 0;
-		}
+		void HaltInputs();
 
 	private:
 
@@ -54,9 +28,9 @@ namespace Frisk::Input {
 		static constexpr int KEY_COUNT = 317;
 
 		static constexpr int BUTTON_COUNT = 8;
-
-		bool m_Keys[KEY_COUNT] = {};
-		bool m_Buttons[BUTTON_COUNT] = {};
+		
+		KeyStatus m_Keys[KEY_COUNT] = {};
+		KeyStatus m_Buttons[BUTTON_COUNT] = {};
 
 		double m_MouseXPOS = 0;
 		double m_MouseYPOS = 0;
@@ -73,16 +47,16 @@ namespace Frisk::Input {
 		inline bool isButtonValid(int button) { return button >= 0 && button < BUTTON_COUNT; }
 
 		// setter functions
-		void setKey(int keycode, bool isActive) {
+		void SetKey(int keycode, KeyStatus state) {
 			if (!isKeyValid(keycode)) return;
 
-			m_Keys[getIndex(keycode)] = isActive;
+			m_Keys[getIndex(keycode)] = state;
 		}
 
-		void setButton(int button, bool isActive) {
+		void SetButton(int button, KeyStatus state) {
 			if (!isButtonValid(button)) return;
 
-			m_Buttons[button] = isActive;
+			m_Buttons[button] = state;
 		}
 
 		void setMousePos(double xpos, double ypos) {
