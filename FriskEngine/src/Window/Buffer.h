@@ -126,7 +126,7 @@ namespace Frisk {
 		virtual U32 GetIndexCount() const = 0;
 
 		// size in bytes
-		static std::unique_ptr<IndexBuffer> Create(const U32* a_Indcs, U32 a_Size);
-		static std::unique_ptr<IndexBuffer> Create(U32 a_Size);
+		static std::shared_ptr<IndexBuffer> Create(const U32* a_Indcs, U32 a_Size);
+		static std::shared_ptr<IndexBuffer> Create(U32 a_Size);
 	};
 }

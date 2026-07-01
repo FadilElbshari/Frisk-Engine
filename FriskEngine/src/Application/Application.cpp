@@ -9,7 +9,6 @@
 
 #include "Window/VertexArray.h"
 #include "Window/Shader.h"
-#include "pch.h"
 
 namespace Frisk {
 	Application::Application(const ApplicationProps& a_BuildProps) {
@@ -35,8 +34,14 @@ namespace Frisk {
 
 	    float verts[] = {
 				-0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
-		 	    0.0f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
-				0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f
+				0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f,
+		 	    0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+				-0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 1.0f
+		};
+
+		U32 indcs[] = {
+			0, 1, 2,
+			2, 3, 0
 		};
 
 	    std::unique_ptr<Shader> shader = Shader::Create("shaders/main.vert", "shaders/main.frag");
@@ -45,11 +50,10 @@ namespace Frisk {
 
 		std::unique_ptr<VertexBuffer> VBO = VertexBuffer::Create(verts, sizeof(verts));
 
-		VertexBufferLayout layout({VertexBufferComponent("Position", VertexDataType::Float3), VertexBufferComponent("Color", VertexDataType::Float3)});
-
-		VBO->SetLayout(layout);
+		VBO->SetLayout(VertexBufferLayout({ VertexBufferComponent("Position", VertexDataType::Float3), VertexBufferComponent("Color", VertexDataType::Float3) }));
 
 		VAO->AssignVertexBuffer(VBO);
+		VAO->AssignIndexBuffer(IndexBuffer::Create(indcs, sizeof(indcs)));
 
 		m_Window->Enable3D();
 
@@ -71,10 +75,9 @@ namespace Frisk {
 			shader->Bind();
 			VAO->Bind();
 			shader->SetFloat("time", glfwGetTime());
-			glDrawArrays(GL_TRIANGLES, 0, 3);
+			glDrawElements(GL_TRIANGLES, VAO->GetIndexCount(), GL_UNSIGNED_INT, nullptr);
 
 			//OnUpdate();
-
 
 
 			// window/input-manager clearing functions

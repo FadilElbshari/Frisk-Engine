@@ -53,4 +53,16 @@ namespace Frisk {
         }
 
     }
+
+    void OpenGLvertexArray::AssignIndexBuffer(std::shared_ptr<IndexBuffer> a_IBO) {
+        m_IndexBuffer = a_IBO;
+        Bind();
+        m_IndexBuffer->Bind();
+    }
+
+    U32 OpenGLvertexArray::GetIndexCount() const {
+        if (!m_IndexBuffer) return 0;
+
+        return m_IndexBuffer->GetIndexCount();
+    }
 }
