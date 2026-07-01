@@ -22,6 +22,7 @@ namespace Frisk {
 			// helper function wrappers
 			void SetWindowBackGround(float r, float g, float b) const;
 			void ClearColorBufferBit() const;
+			void Enable3D() const;
 
 			const std::vector<Event>& GetEventQueue() const;
 			void ClearEventQueue();

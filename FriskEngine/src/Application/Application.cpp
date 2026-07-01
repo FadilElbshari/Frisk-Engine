@@ -7,14 +7,13 @@
 
 #include <GLFW/glfw3.h>
 
-#include "Window/Buffer.h"
 #include "Window/VertexArray.h"
 #include "Window/Shader.h"
 #include "pch.h"
 
 namespace Frisk {
 	Application::Application(const ApplicationProps& a_BuildProps) {
-
+		 
 		int status = glfwInit();
 		FRISK_ASSERT(status, "failed to initialse GLFW");
 
@@ -52,29 +51,34 @@ namespace Frisk {
 
 		VAO->AssignVertexBuffer(VBO);
 
+		m_Window->Enable3D();
+
 		while (!m_Window->ShouldClose()) {
 
+			// reading and consuming events
 			auto& events = m_Window->GetEventQueue();
 			for (auto& e : events) {
 				m_InputManager->ConsumeEvent(e);
 			}
-
+			// clearing the screen before a re-draw
 			m_Window->ClearColorBufferBit();
 
 			if (m_InputManager->GetKeyStatus(GLFW_KEY_R) == Input::KeyStatus::JustPressed) {
 				shader->Reload();
 			}
 
+			// drawing stuff
 			shader->Bind();
 			VAO->Bind();
-			// glBindVertexArray(VAO);
 			shader->SetFloat("time", glfwGetTime());
 			glDrawArrays(GL_TRIANGLES, 0, 3);
+
 			//OnUpdate();
 
 
-			m_InputManager->HaltInputs();
 
+			// window/input-manager clearing functions
+			m_InputManager->HaltInputs();
 			m_Window->ClearEventQueue();
 			m_Window->SwapBuffers();
 			m_Window->PollEvents();

@@ -1,6 +1,5 @@
 #include "Window/Shader.h"
 #include "OpenGL/OpenGLshader.h"
-#include <memory>
 
 namespace Frisk {
     std::unique_ptr<Shader> Shader::Create(const std::filesystem::path &a_VertexShaderPath, const std::filesystem::path &a_FragmentShaderPath) {

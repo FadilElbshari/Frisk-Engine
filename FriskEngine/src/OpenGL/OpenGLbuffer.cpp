@@ -1,6 +1,5 @@
 #include "OpenGL/OpenGLbuffer.h"
 #include "Window/Buffer.h"
-#include "glad/glad.h"
 
 
 namespace Frisk {

@@ -113,5 +113,9 @@ namespace Frisk::Graphics {
 	    m_EventQueue.clear();
 	}
 
+	void Window::Enable3D() const {
+		glEnable(GL_DEPTH_TEST);
+	}
+
 
 }
