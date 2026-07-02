@@ -35,7 +35,12 @@ namespace Frisk::Graphics {
 
 		glfwSetWindowUserPointer(m_WindowHandle, this);
 
-		glViewport(0, 0, m_Width, m_Height);
+		int w, h;
+        glfwGetFramebufferSize(m_WindowHandle, &w, &h);
+
+        m_Width = w;
+        m_Height = h;
+        glViewport(0, 0, m_Width, m_Height);
 
 		// implement callbacks
 		glfwSetErrorCallback([](int error, CNST_CHR_PTR description) {
@@ -48,7 +53,6 @@ namespace Frisk::Graphics {
 
 			win->m_Width = width;
 			win->m_Height = height;
-
 
 			glViewport(0, 0, width, height);
 		});

@@ -9,11 +9,11 @@ x86/
 bld/
 [Bb]in/
 [Oo]bj/
-[尝尝]og/
-[尝尝]ogs/
 
 build/
 out/
+
+compile_commands.json
 
 # Visual Studio cache and settings
 .vs/

@@ -13,6 +13,6 @@ protected:
 };
 
 int main() {
-	Game game({1920, 1080, "Frisky Engine Window", VEC3(120, 120, 255)});
+	Game game({1152, 700, "Frisky Engine Window", VEC3(120, 120, 255)});
 	game.Run();
 }
