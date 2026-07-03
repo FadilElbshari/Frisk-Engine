@@ -49,11 +49,12 @@ namespace Frisk {
 
 
 		std::unique_ptr<VertexBuffer> VBO = VertexBuffer::Create(verts, sizeof(verts));
+		std::shared_ptr<IndexBuffer> IBO = IndexBuffer::Create(indcs, sizeof(indcs));
 
 		VBO->SetLayout(VertexBufferLayout({ VertexBufferComponent("Position", VertexDataType::Float3), VertexBufferComponent("Color", VertexDataType::Float3) }));
 
 		VAO->AssignVertexBuffer(VBO);
-		VAO->AssignIndexBuffer(IndexBuffer::Create(indcs, sizeof(indcs)));
+		VAO->AssignIndexBuffer(IBO);
 
 		m_Window->Enable3D();
 

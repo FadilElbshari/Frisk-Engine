@@ -72,13 +72,13 @@ namespace Frisk {
             DeduceStrideAndOffsets();
 		}
 
-	U32 GetStride() const {
-	    return m_Stride;
-	};
+		U32 GetStride() const {
+			return m_Stride;
+		};
 
-	const std::vector<VertexBufferComponent>& GetComponentList() const {
-	    return m_ComponentList;
-	}
+		const std::vector<VertexBufferComponent>& GetComponentList() const {
+			return m_ComponentList;
+		}
 
 	private:
 	    void DeduceStrideAndOffsets() {
