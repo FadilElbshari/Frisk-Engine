@@ -17,7 +17,7 @@ namespace Frisk {
 	public:
 		OpenGLrenderer() = default;
 
-		virtual ~OpenGLrenderer() = default;
+		virtual ~OpenGLrenderer();
 
 		virtual void Init() override;
 
@@ -25,7 +25,7 @@ namespace Frisk {
 		virtual void Assembleframe() override;
 		virtual void Endframe() override;
 
-		virtual void Submitquad(const VEC3& a_Position, const VEC3& a_Color) override;
+		virtual void Submitquad(const VEC3& a_Position, const VEC3& a_Size, const VEC3& a_Color) override;
 
 		virtual void Shutdown() override;
 
@@ -44,6 +44,6 @@ namespace Frisk {
 
 		};
 
-		static RendererData m_Data;
+		RendererData* m_Data;
 	};
 }

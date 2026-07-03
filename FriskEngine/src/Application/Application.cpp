@@ -6,6 +6,7 @@
 #include "InputManager/InputManager.h"
 
 #include <GLFW/glfw3.h>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include "Window/VertexArray.h"
 #include "Window/Shader.h"
@@ -33,10 +34,10 @@ namespace Frisk {
 	void Application::Run() {
 
 	    float verts[] = {
-				-0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
-				0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f,
-		 	    0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
-				-0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 1.0f
+				320.0f, 180.0f, 0.0f, 1.0f, 0.0f, 0.0f,
+				960.0f, 180.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+				960.0f, 540.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+				320.0f, 540.0f, 0.0f, 1.0f, 0.0f, 1.0f
 		};
 
 		U32 indcs[] = {
@@ -58,6 +59,8 @@ namespace Frisk {
 
 		m_Window->Enable3D();
 
+		shader->SetMat4("proj_matrix", glm::ortho(0.0f, static_cast<float>(1280), 0.0f, static_cast<float>(720), -1.0f, 1.0f));
+
 		while (!m_Window->ShouldClose()) {
 
 			// reading and consuming events
@@ -75,7 +78,7 @@ namespace Frisk {
 			// drawing stuff
 			shader->Bind();
 			VAO->Bind();
-			shader->SetFloat("time", glfwGetTime());
+			//shader->SetFloat("time", glfwGetTime());
 			glDrawElements(GL_TRIANGLES, VAO->GetIndexCount(), GL_UNSIGNED_INT, nullptr);
 
 			//OnUpdate();
