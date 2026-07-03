@@ -1,19 +1,20 @@
 #include "Engine/Application/Application.h"
 #include "Core/Assert.h"
 
-#include "Window/Buffer.h"
 #include "Window/Window.h"
 #include "InputManager/InputManager.h"
+#include "Window/Shader.h"
 
 #include <GLFW/glfw3.h>
 #include <glm/gtc/matrix_transform.hpp>
+#include <memory>
 
-#include "Window/VertexArray.h"
-#include "Window/Shader.h"
+#include "Engine/Renderer/Renderer.h"
+
 
 namespace Frisk {
 	Application::Application(const ApplicationProps& a_BuildProps) {
-		 
+
 		int status = glfwInit();
 		FRISK_ASSERT(status, "failed to initialse GLFW");
 
@@ -33,33 +34,14 @@ namespace Frisk {
 
 	void Application::Run() {
 
-	    float verts[] = {
-				320.0f, 180.0f, 0.0f, 1.0f, 0.0f, 0.0f,
-				960.0f, 180.0f, 0.0f, 0.0f, 0.0f, 1.0f,
-				960.0f, 540.0f, 0.0f, 0.0f, 1.0f, 0.0f,
-				320.0f, 540.0f, 0.0f, 1.0f, 0.0f, 1.0f
-		};
-
-		U32 indcs[] = {
-			0, 1, 2,
-			2, 3, 0
-		};
-
+	    std::unique_ptr<Renderer> renderer = Renderer::Create();
 	    std::unique_ptr<Shader> shader = Shader::Create("shaders/main.vert", "shaders/main.frag");
-		std::unique_ptr<VertexArray> VAO = VertexArray::Create();
 
-
-		std::unique_ptr<VertexBuffer> VBO = VertexBuffer::Create(verts, sizeof(verts));
-		std::shared_ptr<IndexBuffer> IBO = IndexBuffer::Create(indcs, sizeof(indcs));
-
-		VBO->SetLayout(VertexBufferLayout({ VertexBufferComponent("Position", VertexDataType::Float3), VertexBufferComponent("Color", VertexDataType::Float3) }));
-
-		VAO->AssignVertexBuffer(VBO);
-		VAO->AssignIndexBuffer(IBO);
+		renderer->Init();
 
 		m_Window->Enable3D();
 
-		shader->SetMat4("proj_matrix", glm::ortho(0.0f, static_cast<float>(1280), 0.0f, static_cast<float>(720), -1.0f, 1.0f));
+		shader->SetMat4("proj_matrix", glm::ortho(0.0f, static_cast<float>(1280), static_cast<float>(720), 0.0f, -1.0f, 1.0f));
 
 		while (!m_Window->ShouldClose()) {
 
@@ -77,9 +59,15 @@ namespace Frisk {
 
 			// drawing stuff
 			shader->Bind();
-			VAO->Bind();
-			//shader->SetFloat("time", glfwGetTime());
-			glDrawElements(GL_TRIANGLES, VAO->GetIndexCount(), GL_UNSIGNED_INT, nullptr);
+			renderer->Beginframe();
+
+			renderer->Submitquad(VEC3(200, 100, 0), VEC3(100, 100, 0), VEC3(255, 0, 0));
+			renderer->Submitquad(VEC3(300, 100, 0), VEC3(100, 100, 0), VEC3(0, 255, 0));
+			renderer->Submitquad(VEC3(400, 100, 0), VEC3(100, 100, 0), VEC3(0, 0, 255));
+			renderer->Submitquad(VEC3(500, 100, 0), VEC3(100, 100, 0), VEC3(255, 0, 255));
+
+			renderer->Endframe();
+
 
 			//OnUpdate();
 
@@ -90,5 +78,7 @@ namespace Frisk {
 			m_Window->SwapBuffers();
 			m_Window->PollEvents();
 		}
+
+		renderer->Shutdown();
 	}
 }

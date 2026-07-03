@@ -38,12 +38,15 @@ namespace Frisk {
 
 			QuadData* VertexDataBuffer = nullptr;
 			QuadData* StartOfDataPointer = nullptr;
-			
+
 			U32* IndicesBuffer = nullptr;
 			U32* StartOfIndicesPointer = nullptr;
 
+			U32 VertexCount = 0;
+			U32 IndexCount = 0;
+
 		};
 
-		RendererData* m_Data;
+		RendererData m_Data;
 	};
 }

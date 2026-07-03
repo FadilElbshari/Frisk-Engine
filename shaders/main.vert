@@ -7,8 +7,12 @@ out vec3 color;
 
 uniform float time;
 
+uniform mat4 view_matrix;
+uniform mat4 proj_matrix;
+
+
 void main()
 {
     color = aColor;
-    gl_Position = vec4(aPos.x + sin(time), aPos.y + cos(time), aPos.z, 1.0);
+    gl_Position = proj_matrix * vec4(aPos.x, aPos.y, aPos.z, 1.0);
 }

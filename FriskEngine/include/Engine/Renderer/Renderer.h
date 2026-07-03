@@ -4,7 +4,7 @@
 #include "Engine/Core/Types.h"
 
 namespace Frisk {
-    class Renderer {
+    class ENGINE_API Renderer {
     public:
 
         virtual ~Renderer() = default;
