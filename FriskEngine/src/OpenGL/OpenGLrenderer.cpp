@@ -1,4 +1,5 @@
 #include "OpenGL/OpenGLrenderer.h"
+#include "Engine/Core/Log.h"
 #include "pch.h"
 
 namespace Frisk {
@@ -38,6 +39,8 @@ namespace Frisk {
 
 			value += 4;
 		}
+
+		m_Data.IBO->SetData(m_Data.StartOfIndicesPointer, MAX_INDCS * sizeof(U32));
 	}
 
 	void OpenGLrenderer::Beginframe() {
@@ -47,6 +50,16 @@ namespace Frisk {
 	}
 
 	void OpenGLrenderer::Submitquad(const VEC3& a_Position, const VEC3& a_Size, const VEC3& a_Color) {
+	    if (m_Data.IndexCount >= MAX_INDCS || m_Data.VertexCount >= MAX_VERTS) {
+
+    		Assembleframe();
+            glDrawElements(GL_TRIANGLES, m_Data.IndexCount, GL_UNSIGNED_INT, nullptr);
+
+			m_Data.VertexDataBuffer = m_Data.StartOfDataPointer; // reset data buffer pointer to initial buffer start pos
+			m_Data.IndexCount = 0;
+			m_Data.VertexCount = 0;
+		}
+
 	    *(m_Data.VertexDataBuffer++) = {VEC3(a_Position.x, a_Position.y + a_Size.y, 0.0f), a_Color/255.0f};
 	    *(m_Data.VertexDataBuffer++) = {VEC3(a_Position.x + a_Size.x, a_Position.y + a_Size.y, 0.0f), a_Color/255.0f};
 	    *(m_Data.VertexDataBuffer++) = {VEC3(a_Position.x + a_Size.x, a_Position.y, 0.0f), a_Color/255.0f};
@@ -58,15 +71,14 @@ namespace Frisk {
 	}
 
 	void OpenGLrenderer::Assembleframe() {
-
+        m_Data.VAO->Bind();
+        m_Data.VBO->SetData(m_Data.StartOfDataPointer, sizeof(QuadData) * m_Data.VertexCount);
 	}
 
 	void OpenGLrenderer::Endframe() {
-        m_Data.VAO->Bind();
-        m_Data.VBO->SetData(m_Data.StartOfDataPointer, sizeof(QuadData) * m_Data.VertexCount);
 
-        m_Data.IBO->SetData(m_Data.StartOfIndicesPointer, m_Data.IndexCount * sizeof(U32));
-
+	    if (m_Data.IndexCount == 0) return;
+        Assembleframe();
         glDrawElements(GL_TRIANGLES, m_Data.IndexCount, GL_UNSIGNED_INT, nullptr);
 	}
 

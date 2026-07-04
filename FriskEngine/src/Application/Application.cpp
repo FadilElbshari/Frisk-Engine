@@ -6,6 +6,7 @@
 #include "Window/Shader.h"
 
 #include <GLFW/glfw3.h>
+#include <cstdlib>
 #include <glm/gtc/matrix_transform.hpp>
 #include <memory>
 
@@ -61,10 +62,12 @@ namespace Frisk {
 			shader->Bind();
 			renderer->Beginframe();
 
-			renderer->Submitquad(VEC3(200, 100, 0), VEC3(100, 100, 0), VEC3(255, 0, 0));
-			renderer->Submitquad(VEC3(300, 100, 0), VEC3(100, 100, 0), VEC3(0, 255, 0));
-			renderer->Submitquad(VEC3(400, 100, 0), VEC3(100, 100, 0), VEC3(0, 0, 255));
-			renderer->Submitquad(VEC3(500, 100, 0), VEC3(100, 100, 0), VEC3(255, 0, 255));
+			for (U32 i{}; i < 1280; i++) {
+			    for (U32 j{}; j < 720; j++) {
+			        renderer->Submitquad(VEC3(i, j, 0), VEC3(1, 1, 0), VEC3((i*j) % 256, (i+j) % 256, (int)abs((long double)(i-j)) % 256));
+				}
+			}
+
 
 			renderer->Endframe();
 

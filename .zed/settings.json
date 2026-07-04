@@ -1,0 +1,11 @@
+{
+  "file_scan_exclusions": [
+    "build",
+    ".cache",
+    "LICENSE",
+    ".gitignore",
+    "Vendor",
+    "compile_commands.json",
+    ".*",
+  ],
+}
