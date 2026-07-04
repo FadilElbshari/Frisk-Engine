@@ -2,9 +2,9 @@
 #include "Window/VertexArray.h"
 #include "Window/Buffer.h"
 
-#define MAX_QUADS 100
-#define MAX_VERTS MAX_QUADS * 4
-#define MAX_INDCS MAX_QUADS * 6
+#define MAX_QUADS_BATCHED 100
+#define MAX_VERTS MAX_QUADS_BATCHED * 4
+#define MAX_INDCS MAX_QUADS_BATCHED * 6
 
 namespace Frisk {
 
@@ -13,11 +13,11 @@ namespace Frisk {
 		VEC3 color;
 	};
 
-	class OpenGLrenderer : public Renderer {
+	class OpenGLrendererB : public Renderer {
 	public:
-		OpenGLrenderer() = default;
+		OpenGLrendererB() = default;
 
-		virtual ~OpenGLrenderer();
+		virtual ~OpenGLrendererB();
 
 		virtual void Init() override;
 

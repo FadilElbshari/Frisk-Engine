@@ -34,21 +34,28 @@ namespace Frisk {
             // float check
             if (comp.type >= VertexDataType::Float && comp.type <= VertexDataType::Float4) {
                 glVertexAttribPointer(m_VertexAttribCounter, comp.GetInternalComponentCount(), GL_FLOAT, comp.normalised ? GL_TRUE : GL_FALSE, layout.GetStride(), reinterpret_cast<void*>(comp.offset));
-                // Log::Info(comp.type == VertexDataType::Float3, " ", comp.GetInternalComponentCount(), " ", comp.offset, " ", m_VertexAttribCounter, comp.normalised ? GL_TRUE : GL_FALSE, "\n");
                 glEnableVertexAttribArray(m_VertexAttribCounter);
+                if (comp.instanced)
+                    glVertexAttribDivisor(m_VertexAttribCounter, 1);
                 m_VertexAttribCounter++;
             }
             // matrices
             else if (comp.type >= VertexDataType::Mat3 && comp.type <= VertexDataType::Mat4) {
                 for (U32 i{}; i < comp.GetInternalComponentCount(); i++) {
                     glVertexAttribPointer(m_VertexAttribCounter, comp.GetInternalComponentCount(), GL_FLOAT, comp.normalised ? GL_TRUE : GL_FALSE, layout.GetStride(), reinterpret_cast<void*>(comp.offset));
-                    glEnableVertexAttribArray(m_VertexAttribCounter++);
+                    glEnableVertexAttribArray(m_VertexAttribCounter);
+                    if (comp.instanced)
+                        glVertexAttribDivisor(m_VertexAttribCounter, 1);
+                    m_VertexAttribCounter++;
                 }
             }
             // ints and bool
             else if (comp.type >= VertexDataType::Int && comp.type <= VertexDataType::Bool) {
                 glVertexAttribIPointer(m_VertexAttribCounter, comp.GetInternalComponentCount(), GL_INT, layout.GetStride(), reinterpret_cast<void*>(comp.offset));
-                glEnableVertexAttribArray(m_VertexAttribCounter++);
+                glEnableVertexAttribArray(m_VertexAttribCounter);
+                if (comp.instanced)
+                    glVertexAttribDivisor(m_VertexAttribCounter, 1);
+                m_VertexAttribCounter++;
             }
         }
 

@@ -18,7 +18,8 @@ namespace Frisk {
 
         virtual void Shutdown() = 0;
 
-        static std::unique_ptr<Renderer> Create();
+        static std::unique_ptr<Renderer> CreateB();
+        static std::unique_ptr<Renderer> CreateI();
 
     };
 }

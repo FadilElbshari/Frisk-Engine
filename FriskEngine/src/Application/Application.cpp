@@ -35,8 +35,9 @@ namespace Frisk {
 
 	void Application::Run() {
 
-	    std::unique_ptr<Renderer> renderer = Renderer::Create();
-	    std::unique_ptr<Shader> shader = Shader::Create("shaders/main.vert", "shaders/main.frag");
+	    std::unique_ptr<Renderer> renderer = Renderer::CreateI();
+	    // std::unique_ptr<Shader> shader = Shader::Create("shaders/main.vert", "shaders/main.frag");
+		std::unique_ptr<Shader> shader = Shader::Create("shaders/main2.vert", "shaders/main2.frag");
 
 		renderer->Init();
 
@@ -56,6 +57,8 @@ namespace Frisk {
 
 			if (m_InputManager->GetKeyStatus(GLFW_KEY_R) == Input::KeyStatus::JustPressed) {
 				shader->Reload();
+				shader->SetMat4("proj_matrix", glm::ortho(0.0f, static_cast<float>(1280), static_cast<float>(720), 0.0f, -1.0f, 1.0f));
+
 			}
 
 			// drawing stuff
@@ -67,6 +70,8 @@ namespace Frisk {
 			        renderer->Submitquad(VEC3(i, j, 0), VEC3(1, 1, 0), VEC3((i*j) % 256, (i+j) % 256, (int)abs((long double)(i-j)) % 256));
 				}
 			}
+
+
 
 
 			renderer->Endframe();

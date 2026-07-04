@@ -38,8 +38,9 @@ namespace Frisk {
 		U32 size;
 		U32 offset;
 		bool normalised;
+		bool instanced;
 
-		VertexBufferComponent(const STRING& a_Name, VertexDataType a_Type, bool a_Normalised = false) : name(a_Name), type(a_Type), size(GetSizeFromDataType(a_Type)), normalised(a_Normalised), offset(0) {
+		VertexBufferComponent(const STRING& a_Name, VertexDataType a_Type,  bool a_Instanced = false, bool a_Normalised = false) : name(a_Name), type(a_Type), size(GetSizeFromDataType(a_Type)), normalised(a_Normalised), instanced(a_Instanced), offset(0) {
 
 		}
 
