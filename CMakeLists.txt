@@ -16,9 +16,10 @@ option(ENGINE_DIST "disable all dev tools within code" OFF)
 # ensure all binaries including EXEs LIBs and DLLs are in one place
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON) 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # proceed to subdirectories and run relavent build code
 add_subdirectory(Vendor) # first as it includes dependencies required by custom engine code
 add_subdirectory(FriskEngine)
-add_subdirectory(App)
+add_subdirectory(LearnOpenGL)
+#add_subdirectory(App)

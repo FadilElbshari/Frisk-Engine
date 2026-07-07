@@ -1,6 +1,9 @@
 #pragma once
 
+#include <filesystem>
+
 namespace Frisk {
+    std::filesystem::path GetExecutableDir();
     STRING ParseFile(const std::filesystem::path &a_FilePath);
 
     enum class FileStatus { created, modified, erased };

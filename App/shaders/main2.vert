@@ -19,5 +19,5 @@ void main()
     color = aColor;
     vec3 worldPos = (aPos) * aSize + aTranslation;
 
-    gl_Position = proj_matrix * vec4(worldPos, 1.0);
+    gl_Position = proj_matrix * view_matrix * vec4(worldPos, 1.0);
 }
