@@ -3,17 +3,18 @@
 
 #include "Window/GraphicsContext.h"
 
-namespace Frisk::Graphics {
-	class OpenGLcontext : public GraphicsContext {
-	public:
-		OpenGLcontext(GLFWwindow* a_WindowHandle);
-		~OpenGLcontext() override = default;
+namespace Frisk::Graphics
+{
+    class OpenGLcontext : public GraphicsContext
+    {
+      public:
+        OpenGLcontext(GLFWwindow *a_WindowHandle);
+        ~OpenGLcontext() override = default;
 
-		virtual bool Init() override;
-		virtual void SwapBuffers() override;
+        virtual bool Init() override;
+        virtual void SwapBuffers() override;
 
-	private:
-		GLFWwindow* m_WindowHandle;
-
-	};
-}
+      private:
+        GLFWwindow *m_WindowHandle;
+    };
+} // namespace Frisk::Graphics

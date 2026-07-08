@@ -2,17 +2,19 @@
 
 #include "Window/Texture.h"
 
-namespace Frisk {
-    class OpenGLtexture : public Texture {
-    public:
+namespace Frisk
+{
+    class OpenGLtexture : public Texture
+    {
+      public:
         OpenGLtexture();
-        OpenGLtexture(const std::filesystem::path& a_TexturePath);
+        OpenGLtexture(const std::filesystem::path &a_TexturePath);
         virtual ~OpenGLtexture() override;
 
         virtual void Bind() const override;
         virtual void Unbind() const override;
 
-    private:
+      private:
         U32 m_TextureID;
 
         U32 m_Width;
@@ -20,4 +22,4 @@ namespace Frisk {
 
         std::filesystem::path m_TexturePath;
     };
-}
+} // namespace Frisk

@@ -1,10 +1,10 @@
 #version 330 core
 
 layout(location = 0) in vec3 aPos;
-layout(location = 1) in vec3 aColor;
+layout(location = 1) in vec3 aNormal;
 
-// out vec3 color;
-out float z_pos;
+out vec3 Normal;
+out vec3 FragPos;
 
 uniform float time;
 
@@ -14,8 +14,8 @@ uniform mat4 model_matrix;
 
 void main()
 {
-    // color = aColor;
     vec4 final_pos = proj_matrix * view_matrix * model_matrix * vec4(aPos.x, aPos.y, aPos.z, 1.0);
-    z_pos = final_pos.z;
+    Normal = aNormal;
+    FragPos = vec3(model_matrix * vec4(aPos, 1.0));
     gl_Position = final_pos;
 }

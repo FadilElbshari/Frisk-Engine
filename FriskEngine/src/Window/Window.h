@@ -22,10 +22,16 @@ namespace Frisk
             void PollEvents() const;
             bool ShouldClose() const;
 
+            const VEC2& GetMousePos() const { return m_MousePos; }
+
             // helper function wrappers
             void SetWindowBackGround(float r, float g, float b) const;
             void ClearColorBufferBit() const;
             void Enable3D() const;
+            void HideCursor() const;
+            void ShowCursor() const;
+            void EnableVSync() const;
+            void DisableVSync() const;
 
             const std::vector<Event> &GetEventQueue() const;
             void ClearEventQueue();
@@ -40,7 +46,9 @@ namespace Frisk
             U32 m_Height = 0;
             STRING m_Title;
 
+            VEC2 m_MousePos = {0.0f, 0.0f};
+
             bool m_Running = false;
         };
-    }
-}
+    } // namespace Graphics
+} // namespace Frisk

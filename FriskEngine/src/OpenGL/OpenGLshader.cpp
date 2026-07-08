@@ -1,15 +1,20 @@
 #include "OpenGL/OpenGLshader.h"
 
-#include "Engine/Utils/File.h"
 #include "Engine/Core/Log.h"
+#include "Engine/Utils/File.h"
 
-namespace Frisk {
+namespace Frisk
+{
 
-    OpenGLshader::OpenGLshader(const std::filesystem::path &a_VertexShaderPath, const std::filesystem::path &a_FragmentShaderPath) : m_VertexShaderPath(a_VertexShaderPath), m_FragmentShaderPath(a_FragmentShaderPath) {
+    OpenGLshader::OpenGLshader(const std::filesystem::path &a_VertexShaderPath,
+                               const std::filesystem::path &a_FragmentShaderPath)
+        : m_VertexShaderPath(a_VertexShaderPath), m_FragmentShaderPath(a_FragmentShaderPath)
+    {
         STRING Vsource = ParseFile(a_VertexShaderPath);
         STRING Fsource = ParseFile(a_FragmentShaderPath);
 
-        if (!strcmp(Vsource.c_str(), "") || !strcmp(Fsource.c_str(), "")) {
+        if (!strcmp(Vsource.c_str(), "") || !strcmp(Fsource.c_str(), ""))
+        {
             Log::Error("missing file contents\n");
             return;
         }
@@ -23,7 +28,8 @@ namespace Frisk {
         char info[512];
 
         glGetShaderiv(m_VertexShader, GL_COMPILE_STATUS, &success);
-        if (!success) {
+        if (!success)
+        {
             glGetShaderInfoLog(m_VertexShader, 512, NULL, info);
             Log::Error("Error compiling vertex shader: ", a_VertexShaderPath, ". ", info, "\n\n");
             return;
@@ -35,7 +41,8 @@ namespace Frisk {
         glCompileShader(m_FragmentShader);
 
         glGetShaderiv(m_FragmentShader, GL_COMPILE_STATUS, &success);
-        if (!success) {
+        if (!success)
+        {
             glGetShaderInfoLog(m_FragmentShader, 512, NULL, info);
             Log::Error("Error compiling vertex shader: ", a_FragmentShaderPath, ". ", info, "\n\n");
             return;
@@ -49,28 +56,26 @@ namespace Frisk {
         Log::Info("shader program successfully compiled\n");
     }
 
-    OpenGLshader::~OpenGLshader() {
+    OpenGLshader::~OpenGLshader()
+    {
         glDeleteProgram(m_ShaderProgram);
 
         glDeleteShader(m_VertexShader);
         glDeleteShader(m_FragmentShader);
     }
 
+    void OpenGLshader::Bind() const { glUseProgram(m_ShaderProgram); }
 
-    void OpenGLshader::Bind() const {
-        glUseProgram(m_ShaderProgram);
-    }
+    void OpenGLshader::Unbind() const { glUseProgram(0); }
 
-    void OpenGLshader::Unbind() const {
-        glUseProgram(0);
-    }
-
-    void OpenGLshader::Reload() {
+    void OpenGLshader::Reload()
+    {
         Log::Info("Running reload on shader\n");
         STRING Vsource = ParseFile(m_VertexShaderPath);
         STRING Fsource = ParseFile(m_FragmentShaderPath);
 
-        if (!strcmp(Vsource.c_str(), "") || !strcmp(Fsource.c_str(), "")) {
+        if (!strcmp(Vsource.c_str(), "") || !strcmp(Fsource.c_str(), ""))
+        {
             Log::Error("missing file contents\n");
             return;
         }
@@ -84,7 +89,8 @@ namespace Frisk {
         char info[512];
 
         glGetShaderiv(m_VertexShader, GL_COMPILE_STATUS, &success);
-        if (!success) {
+        if (!success)
+        {
             glGetShaderInfoLog(m_VertexShader, 512, NULL, info);
             Log::Error("Error compiling vertex shader: ", m_VertexShaderPath, ". ", info, "\n\n");
             return;
@@ -96,7 +102,8 @@ namespace Frisk {
         glCompileShader(m_FragmentShader);
 
         glGetShaderiv(m_FragmentShader, GL_COMPILE_STATUS, &success);
-        if (!success) {
+        if (!success)
+        {
             glGetShaderInfoLog(m_FragmentShader, 512, NULL, info);
             Log::Error("Error compiling vertex shader: ", m_FragmentShaderPath, ". ", info, "\n\n");
             return;
@@ -110,38 +117,45 @@ namespace Frisk {
         Log::Info("shader program successfully compiled\n");
     }
 
-    void OpenGLshader::SetFloat(const STRING& a_Name, float a_Value) const {
+    void OpenGLshader::SetFloat(const STRING &a_Name, float a_Value) const
+    {
         Bind();
         glUniform1f(GetUniformLocation(a_Name), a_Value);
     }
-    void OpenGLshader::SetFloat2(const STRING& a_Name, const VEC2& a_Value) const {
+    void OpenGLshader::SetFloat2(const STRING &a_Name, const VEC2 &a_Value) const
+    {
         Bind();
         glUniform2f(GetUniformLocation(a_Name), a_Value.x, a_Value.y);
     }
-    void OpenGLshader::SetFloat3(const STRING& a_Name, const VEC3& a_Value) const {
+    void OpenGLshader::SetFloat3(const STRING &a_Name, const VEC3 &a_Value) const
+    {
         Bind();
         glUniform3f(GetUniformLocation(a_Name), a_Value.x, a_Value.y, a_Value.z);
     }
-    void OpenGLshader::SetFloat4(const STRING& a_Name, const VEC4& a_Value) const {
+    void OpenGLshader::SetFloat4(const STRING &a_Name, const VEC4 &a_Value) const
+    {
         Bind();
         glUniform4f(GetUniformLocation(a_Name), a_Value.x, a_Value.y, a_Value.z, a_Value.w);
     }
-    void OpenGLshader::SetMat3(const STRING& a_Name, const MAT3& a_Value) const {
+    void OpenGLshader::SetMat3(const STRING &a_Name, const MAT3 &a_Value) const
+    {
         Bind();
         glUniformMatrix3fv(GetUniformLocation(a_Name), 1, GL_FALSE, glm::value_ptr(a_Value));
     }
-    void OpenGLshader::SetMat4(const STRING& a_Name, const MAT4& a_Value) const {
+    void OpenGLshader::SetMat4(const STRING &a_Name, const MAT4 &a_Value) const
+    {
         Bind();
         glUniformMatrix4fv(GetUniformLocation(a_Name), 1, GL_FALSE, glm::value_ptr(a_Value));
     }
 
-    void OpenGLshader::SetBool(const STRING& a_Name, bool a_Value) const {
+    void OpenGLshader::SetBool(const STRING &a_Name, bool a_Value) const
+    {
         Bind();
         glUniform1i(GetUniformLocation(a_Name), a_Value);
     }
 
-
-    U32 OpenGLshader::GetUniformLocation(const STRING& a_Name) const {
+    U32 OpenGLshader::GetUniformLocation(const STRING &a_Name) const
+    {
         return glGetUniformLocation(m_ShaderProgram, a_Name.c_str());
     }
-}
+} // namespace Frisk

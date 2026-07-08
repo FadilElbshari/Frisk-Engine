@@ -1,15 +1,15 @@
 #pragma once
 
 #if defined(ENGINE_BUILD_SHARED)
-	#if defined(_WIN32)
-		#if defined(ENGINE_BUILD_DLL)
-			#define ENGINE_API __declspec(dllexport)
-		#else
-			#define ENGINE_API __declspec(dllimport)
-		#endif
-	#else
-		#define ENGINE_API __attribute__((visibility("default")))
-	#endif
+#if defined(_WIN32)
+#if defined(ENGINE_BUILD_DLL)
+#define ENGINE_API __declspec(dllexport)
 #else
-	#define ENGINE_API
+#define ENGINE_API __declspec(dllimport)
+#endif
+#else
+#define ENGINE_API __attribute__((visibility("default")))
+#endif
+#else
+#define ENGINE_API
 #endif

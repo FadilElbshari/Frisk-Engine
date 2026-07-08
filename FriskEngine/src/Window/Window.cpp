@@ -7,7 +7,9 @@
 namespace Frisk::Graphics
 {
 
-    Window::Window(U32 a_Width, U32 a_Height, STRING a_Title) : m_Width(a_Width), m_Height(a_Height), m_Title(a_Title) {}
+    Window::Window(U32 a_Width, U32 a_Height, STRING a_Title) : m_Width(a_Width), m_Height(a_Height), m_Title(a_Title)
+    {
+    }
 
     Window::~Window()
     {
@@ -48,6 +50,11 @@ namespace Frisk::Graphics
         m_Width = w;
         m_Height = h;
         glViewport(0, 0, m_Width, m_Height);
+
+        double x, y;
+        glfwGetCursorPos(m_WindowHandle, &x, &y);
+
+        m_MousePos = {x, y};
 
         // implement callbacks
         glfwSetErrorCallback([](int error, CNST_CHR_PTR description)
@@ -93,7 +100,8 @@ namespace Frisk::Graphics
                                      if (!win)
                                          return;
 
-                                     // impl->event_queue.push_back(MouseMoveEvent{ x, y });
+                                     win->m_MousePos.x = x;
+                                     win->m_MousePos.y = y;
                                  });
 
         glfwSetWindowCloseCallback(m_WindowHandle,
@@ -131,5 +139,11 @@ namespace Frisk::Graphics
     void Window::ClearEventQueue() { m_EventQueue.clear(); }
 
     void Window::Enable3D() const { glEnable(GL_DEPTH_TEST); }
+
+    void Window::HideCursor() const { glfwSetInputMode(m_WindowHandle, GLFW_CURSOR, GLFW_CURSOR_DISABLED); }
+    void Window::ShowCursor() const { glfwSetInputMode(m_WindowHandle, GLFW_CURSOR, GLFW_CURSOR_NORMAL); }
+
+    void Window::DisableVSync() const { glfwSwapInterval(0); }
+    void Window::EnableVSync() const { glfwSwapInterval(1); }
 
 } // namespace Frisk::Graphics

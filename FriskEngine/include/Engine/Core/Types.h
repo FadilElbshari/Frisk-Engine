@@ -1,7 +1,7 @@
 #include <glm/glm.hpp>
 #include <string>
 
-using CNST_CHR_PTR = const char*;
+using CNST_CHR_PTR = const char *;
 
 using STRING = std::string;
 

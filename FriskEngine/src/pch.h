@@ -3,17 +3,17 @@
 // pre-compiled header including all commonly used headers
 
 // standard library
-#include <iostream>
-#include <vector>
-#include <string>
-#include <string.h>
-#include <unordered_map>
-#include <memory>
 #include <algorithm>
-#include <functional>
-#include <variant>
 #include <filesystem>
 #include <fstream>
+#include <functional>
+#include <iostream>
+#include <memory>
+#include <string.h>
+#include <string>
+#include <unordered_map>
+#include <variant>
+#include <vector>
 
 // third-party libraries
 #include <glad/glad.h>

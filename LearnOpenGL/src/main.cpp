@@ -2,17 +2,17 @@
 
 using namespace Frisk;
 
-class Game : public Application {
-public:
-	using Application::Application;
+class Game : public Application
+{
+  public:
+    using Application::Application;
 
-protected:
-    virtual void OnUpdate() override {
-
-    }
+  protected:
+    virtual void OnUpdate() override {}
 };
 
-int main() {
-	Game game({1280, 720, "Learning OpenGL", VEC3(240, 240, 240)});
-	game.Run();
+int main()
+{
+    Game game({1280, 720, "Learning OpenGL", VEC3(0, 0, 0)});
+    game.Run();
 }
