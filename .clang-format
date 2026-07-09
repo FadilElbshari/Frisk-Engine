@@ -1,11 +1,19 @@
 BasedOnStyle: LLVM
 
+<<<<<<< HEAD
 BreakBeforeBraces: Allman
+=======
+BreakBeforeBraces: ALLman
+>>>>>>> b462e32 (Braces change)
 
 IndentWidth: 4
 TabWidth: 4
 UseTab: Never
 
+<<<<<<< HEAD
 NamespaceIndentation: All
 
 ColumnLimit: 120
+=======
+ColumnLimit: 120
+>>>>>>> b462e32 (Braces change)
