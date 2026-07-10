@@ -17,7 +17,7 @@ namespace Frisk
 
         virtual void AssignIndexBuffer(std::shared_ptr<IndexBuffer> a_IBO) override;
 
-        U32 GetIndexCount() const;
+        U32 GetIndexCount() const override;
 
       private:
         U32 m_VertexArrayID;

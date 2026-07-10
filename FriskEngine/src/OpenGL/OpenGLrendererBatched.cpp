@@ -1,12 +1,12 @@
-#include "OpenGL/OpenGLrendererB.h"
+#include "OpenGL/OpenGLrendererBatched.h"
 #include "pch.h"
 
 namespace Frisk
 {
 
-    OpenGLrendererB::~OpenGLrendererB() {}
+    OpenGLrendererBatched::~OpenGLrendererBatched() {}
 
-    void OpenGLrendererB::Init()
+    void OpenGLrendererBatched::Init()
     {
         m_Data.VAO = VertexArray::Create();
         m_Data.VBO = VertexBuffer::Create(sizeof(QuadData) * MAX_VERTS);
@@ -44,14 +44,14 @@ namespace Frisk
         m_Data.IBO->SetData(m_Data.StartOfIndicesPointer, MAX_INDCS * sizeof(U32));
     }
 
-    void OpenGLrendererB::Beginframe()
+    void OpenGLrendererBatched::Beginframe()
     {
         m_Data.VertexDataBuffer = m_Data.StartOfDataPointer; // reset data buffer pointer to initial buffer start pos
         m_Data.IndexCount = 0;
         m_Data.VertexCount = 0;
     }
 
-    void OpenGLrendererB::Submitquad(const VEC3 &a_Position, const VEC3 &a_Size, const VEC3 &a_Color)
+    void OpenGLrendererBatched::Submitquad(const VEC3 &a_Position, const VEC3 &a_Size, const VEC3 &a_Color)
     {
         if (m_Data.IndexCount >= MAX_INDCS || m_Data.VertexCount >= MAX_VERTS)
         {
@@ -74,13 +74,13 @@ namespace Frisk
         m_Data.IndexCount += 6;
     }
 
-    void OpenGLrendererB::Assembleframe()
+    void OpenGLrendererBatched::Assembleframe()
     {
         m_Data.VAO->Bind();
         m_Data.VBO->SetData(m_Data.StartOfDataPointer, sizeof(QuadData) * m_Data.VertexCount);
     }
 
-    void OpenGLrendererB::Endframe()
+    void OpenGLrendererBatched::Endframe()
     {
 
         if (m_Data.IndexCount == 0)
@@ -89,7 +89,7 @@ namespace Frisk
         glDrawElements(GL_TRIANGLES, m_Data.IndexCount, GL_UNSIGNED_INT, nullptr);
     }
 
-    void OpenGLrendererB::Shutdown()
+    void OpenGLrendererBatched::Shutdown()
     {
         if (m_Data.StartOfDataPointer != nullptr)
             delete[] m_Data.StartOfDataPointer;

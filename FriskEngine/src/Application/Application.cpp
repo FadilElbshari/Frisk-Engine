@@ -111,8 +111,13 @@ namespace Frisk
             // clearing the screen before a re-draw
             m_Window->ClearColorBufferBit();
 
-            shader->Bind();
 
+            if (m_InputManager->GetKeyStatus(GLFW_KEY_R) == Input::KeyStatus::JustPressed)
+            {
+                shader->Reload();
+            }
+
+            shader->Bind();
             m_Camera->cameraUpdate(dt, m_InputManager);
 
             shader->SetMat4("proj_matrix", m_Camera->getProj());
@@ -120,13 +125,14 @@ namespace Frisk
 
             MAT4 model = MAT4(1.0f);
             double time = glfwGetTime();
-            model = glm::translate(model, VEC3(static_cast<float>(sin(time)) * 0.01, 0.0f, 0.0f));
+            model = glm::translate(model, VEC3(0.0f, static_cast<float>(sin(time)) * 0.01, 0.0f));
             VEC4 res = model * VEC4(light_pos, 1.0f);
             light_pos = VEC3(res);
 
             shader->SetFloat3("obj_color", {1.0f, 0.0f, 0.0f});
             shader->SetFloat3("light_source", {1.0f, 1.0f, 1.0f});
             shader->SetFloat3("light_pos", light_pos);
+            shader->SetFloat3("view_pos", m_Camera->getPos());
 
             model = MAT4(1.0f);
             shader->SetMat4("model_matrix", model);

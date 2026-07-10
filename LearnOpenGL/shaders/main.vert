@@ -15,7 +15,7 @@ uniform mat4 model_matrix;
 void main()
 {
     vec4 final_pos = proj_matrix * view_matrix * model_matrix * vec4(aPos.x, aPos.y, aPos.z, 1.0);
-    Normal = aNormal;
+    Normal = mat3(transpose(inverse(model_matrix))) * aNormal;
     FragPos = vec3(model_matrix * vec4(aPos, 1.0));
     gl_Position = final_pos;
 }

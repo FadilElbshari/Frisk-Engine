@@ -14,12 +14,12 @@ namespace Frisk
         VEC3 color;
     };
 
-    class OpenGLrendererI : public Renderer
+    class OpenGLrendererInstanced : public Renderer
     {
       public:
-        OpenGLrendererI() = default;
+        OpenGLrendererInstanced() = default;
 
-        virtual ~OpenGLrendererI();
+        virtual ~OpenGLrendererInstanced();
 
         virtual void Init() override;
 

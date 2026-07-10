@@ -1,18 +1,18 @@
 #include "Engine/Renderer/Renderer.h"
-#include "OpenGL/OpenGLrendererB.h"
-#include "OpenGL/OpenGLrendererI.h"
+#include "OpenGL/OpenGLrendererBatched.h"
+#include "OpenGL/OpenGLrendererInstanced.h"
 
 namespace Frisk
 {
-    std::unique_ptr<Renderer> Renderer::CreateB()
+    std::unique_ptr<Renderer> Renderer::CreateBatched()
     {
         // OpenGL for now
-        return std::make_unique<OpenGLrendererB>();
+        return std::make_unique<OpenGLrendererBatched>();
     }
 
-    std::unique_ptr<Renderer> Renderer::CreateI()
+    std::unique_ptr<Renderer> Renderer::CreateInstanced()
     {
         // OpenGL for now
-        return std::make_unique<OpenGLrendererI>();
+        return std::make_unique<OpenGLrendererInstanced>();
     }
 } // namespace Frisk

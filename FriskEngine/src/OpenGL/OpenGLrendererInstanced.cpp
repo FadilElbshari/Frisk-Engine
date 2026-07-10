@@ -1,11 +1,11 @@
-#include "OpenGL/OpenGLrendererI.h"
+#include "OpenGL/OpenGLrendererInstanced.h"
 
 namespace Frisk
 {
 
-    OpenGLrendererI::~OpenGLrendererI() {}
+    OpenGLrendererInstanced::~OpenGLrendererInstanced() {}
 
-    void OpenGLrendererI::Init()
+    void OpenGLrendererInstanced::Init()
     {
         float verts[] = {0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f};
 
@@ -31,24 +31,24 @@ namespace Frisk
         m_Data.VAO->AssignIndexBuffer(m_Data.IBO);
     }
 
-    void OpenGLrendererI::Beginframe()
+    void OpenGLrendererInstanced::Beginframe()
     {
         m_Data.Data = m_Data.StartOfData;
         m_Data.InstanceCount = 0;
     }
 
-    void OpenGLrendererI::Submitquad(const VEC3 &a_Position, const VEC3 &a_Size, const VEC3 &a_Color)
+    void OpenGLrendererInstanced::Submitquad(const VEC3 &a_Position, const VEC3 &a_Size, const VEC3 &a_Color)
     {
         *(m_Data.Data++) = {a_Position, a_Size, a_Color / 255.0f};
         m_Data.InstanceCount++;
     }
 
-    void OpenGLrendererI::Assembleframe()
+    void OpenGLrendererInstanced::Assembleframe()
     {
         m_Data.VBOinstanced->SetData(m_Data.StartOfData, m_Data.InstanceCount * sizeof(InstancedData));
     }
 
-    void OpenGLrendererI::Endframe()
+    void OpenGLrendererInstanced::Endframe()
     {
         Assembleframe();
         m_Data.VAO->Bind();
@@ -56,7 +56,7 @@ namespace Frisk
                                 m_Data.InstanceCount);
     }
 
-    void OpenGLrendererI::Shutdown()
+    void OpenGLrendererInstanced::Shutdown()
     {
         if (m_Data.StartOfData != nullptr)
             delete[] m_Data.StartOfData;

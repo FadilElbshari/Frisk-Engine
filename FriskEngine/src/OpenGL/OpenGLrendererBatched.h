@@ -15,12 +15,12 @@ namespace Frisk
         VEC3 color;
     };
 
-    class OpenGLrendererB : public Renderer
+    class OpenGLrendererBatched : public Renderer
     {
       public:
-        OpenGLrendererB() = default;
+        OpenGLrendererBatched() = default;
 
-        virtual ~OpenGLrendererB();
+        virtual ~OpenGLrendererBatched();
 
         virtual void Init() override;
 
