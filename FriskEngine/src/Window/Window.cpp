@@ -146,4 +146,10 @@ namespace Frisk::Graphics
     void Window::DisableVSync() const { glfwSwapInterval(0); }
     void Window::EnableVSync() const { glfwSwapInterval(1); }
 
+    void Window::EditWindowTitle(const STRING& a_Title)
+    {
+        m_Title = a_Title;
+        glfwSetWindowTitle(m_WindowHandle, a_Title.c_str());
+    }
+
 } // namespace Frisk::Graphics

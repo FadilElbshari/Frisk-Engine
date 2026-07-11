@@ -32,6 +32,7 @@ namespace Frisk
             void ShowCursor() const;
             void EnableVSync() const;
             void DisableVSync() const;
+            void EditWindowTitle(const STRING& a_Title);
 
             const std::vector<Event> &GetEventQueue() const;
             void ClearEventQueue();

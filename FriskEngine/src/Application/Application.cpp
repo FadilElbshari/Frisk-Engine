@@ -12,6 +12,7 @@
 #include "glm/ext/matrix_transform.hpp"
 #include <chrono>
 #include <memory>
+#include <string>
 
 float vertices[] = {
     -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
@@ -69,7 +70,7 @@ namespace Frisk
         FRISK_ASSERT(status, "failed to initialse GLFW");
 
         m_Window->Init();
-        m_Window->EnableVSync();
+        m_Window->DisableVSync();
         m_Window->SetWindowBackGround(a_BuildProps.background.x, a_BuildProps.background.y, a_BuildProps.background.z);
         m_Window->Enable3D();
         m_Window->HideCursor();
@@ -97,6 +98,8 @@ namespace Frisk
 
         VEC3 light_pos = {1.2f, 1.0f, 2.0f};
 
+        auto fps_count_time = std::chrono::steady_clock::now();
+
         float dt = 0;
         while (!m_Window->ShouldClose())
         {
@@ -117,6 +120,7 @@ namespace Frisk
                 shader->Reload();
             }
 
+
             shader->Bind();
             m_Camera->cameraUpdate(dt, m_InputManager);
 
@@ -125,7 +129,7 @@ namespace Frisk
 
             MAT4 model = MAT4(1.0f);
             double time = glfwGetTime();
-            model = glm::translate(model, VEC3(0.0f, static_cast<float>(sin(time)) * 0.01, 0.0f));
+            // model = glm::translate(model, VEC3(0.0f, static_cast<float>(sin(time)) * 0.01, 0.0f));
             VEC4 res = model * VEC4(light_pos, 1.0f);
             light_pos = VEC3(res);
 
@@ -157,6 +161,18 @@ namespace Frisk
             auto frameEnd = std::chrono::steady_clock::now();
             auto timeDiff = frameEnd - frameStart;
             dt = std::chrono::duration<float>(timeDiff).count();
+
+            auto current_time = std::chrono::steady_clock::now();
+
+            if ((std::chrono::duration<float>(current_time - fps_count_time).count()) >= 1)
+            {
+                fps_count_time = current_time;
+                int fps = 1/dt;
+                STRING title = "FPS: ";
+                title += std::to_string(fps);
+
+                m_Window->EditWindowTitle(title);
+            }
         }
     }
 } // namespace Frisk
